@@ -1,0 +1,135 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
+        }
+      },
+      "RepoInterface/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RepoInterface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RepoInterface.dll": {}
+        }
+      },
+      "ServicesInterface/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Models": "1.0.0",
+          "RepoInterface": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ServicesInterface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ServicesInterface.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
+    },
+    "RepoInterface/1.0.0": {
+      "type": "project",
+      "path": "../RepoInterface/RepoInterface.csproj",
+      "msbuildProject": "../RepoInterface/RepoInterface.csproj"
+    },
+    "ServicesInterface/1.0.0": {
+      "type": "project",
+      "path": "../ServicesInterface/ServicesInterface.csproj",
+      "msbuildProject": "../ServicesInterface/ServicesInterface.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Models >= 1.0.0",
+      "RepoInterface >= 1.0.0",
+      "ServicesInterface >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\lynth\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "G:\\Ait miniproject[KANBAN]\\API\\Services\\Services.csproj",
+      "projectName": "Services",
+      "projectPath": "G:\\Ait miniproject[KANBAN]\\API\\Services\\Services.csproj",
+      "packagesPath": "C:\\Users\\lynth\\.nuget\\packages\\",
+      "outputPath": "G:\\Ait miniproject[KANBAN]\\API\\Services\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\lynth\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "G:\\Ait miniproject[KANBAN]\\API\\Models\\Models.csproj": {
+              "projectPath": "G:\\Ait miniproject[KANBAN]\\API\\Models\\Models.csproj"
+            },
+            "G:\\Ait miniproject[KANBAN]\\API\\RepoInterface\\RepoInterface.csproj": {
+              "projectPath": "G:\\Ait miniproject[KANBAN]\\API\\RepoInterface\\RepoInterface.csproj"
+            },
+            "G:\\Ait miniproject[KANBAN]\\API\\ServicesInterface\\ServicesInterface.csproj": {
+              "projectPath": "G:\\Ait miniproject[KANBAN]\\API\\ServicesInterface\\ServicesInterface.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

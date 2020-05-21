@@ -1,0 +1,14 @@
+g:\Ait miniproject[KANBAN]\API\Repo\bin\Debug\netcoreapp3.1\Repo.deps.json
+g:\Ait miniproject[KANBAN]\API\Repo\bin\Debug\netcoreapp3.1\Repo.dll
+g:\Ait miniproject[KANBAN]\API\Repo\bin\Debug\netcoreapp3.1\Repo.pdb
+g:\Ait miniproject[KANBAN]\API\Repo\obj\Debug\netcoreapp3.1\Repo.csprojAssemblyReference.cache
+g:\Ait miniproject[KANBAN]\API\Repo\obj\Debug\netcoreapp3.1\Repo.csproj.CoreCompileInputs.cache
+g:\Ait miniproject[KANBAN]\API\Repo\obj\Debug\netcoreapp3.1\Repo.AssemblyInfoInputs.cache
+g:\Ait miniproject[KANBAN]\API\Repo\obj\Debug\netcoreapp3.1\Repo.AssemblyInfo.cs
+g:\Ait miniproject[KANBAN]\API\Repo\obj\Debug\netcoreapp3.1\Repo.dll
+g:\Ait miniproject[KANBAN]\API\Repo\obj\Debug\netcoreapp3.1\Repo.pdb
+g:\Ait miniproject[KANBAN]\API\Repo\bin\Debug\netcoreapp3.1\Models.dll
+g:\Ait miniproject[KANBAN]\API\Repo\bin\Debug\netcoreapp3.1\RepoInterface.dll
+g:\Ait miniproject[KANBAN]\API\Repo\bin\Debug\netcoreapp3.1\RepoInterface.pdb
+g:\Ait miniproject[KANBAN]\API\Repo\bin\Debug\netcoreapp3.1\Models.pdb
+g:\Ait miniproject[KANBAN]\API\Repo\obj\Debug\netcoreapp3.1\Repo.csproj.CopyComplete

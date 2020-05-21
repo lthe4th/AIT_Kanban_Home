@@ -1,0 +1,12 @@
+g:\Ait miniproject[KANBAN]\API\RepoInterface\bin\Debug\netcoreapp3.1\RepoInterface.deps.json
+g:\Ait miniproject[KANBAN]\API\RepoInterface\bin\Debug\netcoreapp3.1\RepoInterface.dll
+g:\Ait miniproject[KANBAN]\API\RepoInterface\bin\Debug\netcoreapp3.1\RepoInterface.pdb
+g:\Ait miniproject[KANBAN]\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.csprojAssemblyReference.cache
+g:\Ait miniproject[KANBAN]\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.csproj.CoreCompileInputs.cache
+g:\Ait miniproject[KANBAN]\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.AssemblyInfoInputs.cache
+g:\Ait miniproject[KANBAN]\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.AssemblyInfo.cs
+g:\Ait miniproject[KANBAN]\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.dll
+g:\Ait miniproject[KANBAN]\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.pdb
+g:\Ait miniproject[KANBAN]\API\RepoInterface\bin\Debug\netcoreapp3.1\Models.dll
+g:\Ait miniproject[KANBAN]\API\RepoInterface\bin\Debug\netcoreapp3.1\Models.pdb
+g:\Ait miniproject[KANBAN]\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.csproj.CopyComplete
