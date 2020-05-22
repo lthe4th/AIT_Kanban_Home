@@ -17,9 +17,20 @@ namespace Services
         {
             this.repo = repo;
         }
+
+        public int CalculatedPercent(int Id)
+        {
+            return this.repo.CalculatedPercent(Id);
+        }
+
+        public bool DeleteAllItem(DeleteAllItem model)
+        {
+            return this.repo.DeleteAllItem(model);
+        }
+
         public bool DeleteItem(int Id)
         {
-            throw new NotImplementedException();
+            return this.repo.DeleteItem(Id);
         }
 
         public IEnumerable<Item> Items(int Id)
@@ -29,7 +40,7 @@ namespace Services
 
         public Item ModItem(ModItem model)
         {
-            throw new NotImplementedException();
+            return this.repo.ModItem(model);
         }
 
         public Item NewItem(newitem model)

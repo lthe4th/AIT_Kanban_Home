@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wSynYCt3VseaWl8sPztDtxgqu+zkBOCGpoM6rkIJ0oA6WciyxDKf3lHkh5NV60WssIUxmCRzNwUPs1a2qOB2Yg==",
+  "dgSpecHash": "i1ka3efD9nCjFNxJiz3sTek7q10Q0deg/XDw/e5AE6cRdyzccr5DPCM59IqM4VSwJpQ4jhB7hhDWlP2CWFX0tg==",
   "success": true,
-  "projectFilePath": "G:\\Ait miniproject[KANBAN]\\API\\RepoInterface\\RepoInterface.csproj",
+  "projectFilePath": "D:\\AIT_Kanban_Home\\API\\RepoInterface\\RepoInterface.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

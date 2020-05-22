@@ -7,6 +7,7 @@ namespace Models.Request
 {
     public class Modboard
     {
-        
+        public int Id { get; set; }
+        public string BoardName { get; set; }
     }
 }

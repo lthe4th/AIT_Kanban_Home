@@ -12,3 +12,17 @@ g:\Ait miniproject[KANBAN]\API\Repo\bin\Debug\netcoreapp3.1\RepoInterface.dll
 g:\Ait miniproject[KANBAN]\API\Repo\bin\Debug\netcoreapp3.1\RepoInterface.pdb
 g:\Ait miniproject[KANBAN]\API\Repo\bin\Debug\netcoreapp3.1\Models.pdb
 g:\Ait miniproject[KANBAN]\API\Repo\obj\Debug\netcoreapp3.1\Repo.csproj.CopyComplete
+D:\AIT_Kanban_Home\API\Repo\bin\Debug\netcoreapp3.1\Repo.deps.json
+D:\AIT_Kanban_Home\API\Repo\bin\Debug\netcoreapp3.1\Repo.dll
+D:\AIT_Kanban_Home\API\Repo\bin\Debug\netcoreapp3.1\Repo.pdb
+D:\AIT_Kanban_Home\API\Repo\bin\Debug\netcoreapp3.1\Models.dll
+D:\AIT_Kanban_Home\API\Repo\bin\Debug\netcoreapp3.1\RepoInterface.dll
+D:\AIT_Kanban_Home\API\Repo\bin\Debug\netcoreapp3.1\RepoInterface.pdb
+D:\AIT_Kanban_Home\API\Repo\bin\Debug\netcoreapp3.1\Models.pdb
+D:\AIT_Kanban_Home\API\Repo\obj\Debug\netcoreapp3.1\Repo.csprojAssemblyReference.cache
+D:\AIT_Kanban_Home\API\Repo\obj\Debug\netcoreapp3.1\Repo.csproj.CoreCompileInputs.cache
+D:\AIT_Kanban_Home\API\Repo\obj\Debug\netcoreapp3.1\Repo.AssemblyInfoInputs.cache
+D:\AIT_Kanban_Home\API\Repo\obj\Debug\netcoreapp3.1\Repo.AssemblyInfo.cs
+D:\AIT_Kanban_Home\API\Repo\obj\Debug\netcoreapp3.1\Repo.csproj.CopyComplete
+D:\AIT_Kanban_Home\API\Repo\obj\Debug\netcoreapp3.1\Repo.dll
+D:\AIT_Kanban_Home\API\Repo\obj\Debug\netcoreapp3.1\Repo.pdb

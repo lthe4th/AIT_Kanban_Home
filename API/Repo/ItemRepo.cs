@@ -12,9 +12,28 @@ namespace Repo
 {
     public class ItemRepo : BaseRepo, IItemRepo
     {
+        public int CalculatedPercent(int Id)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("Id",Id);
+            int percent = SqlMapper.ExecuteScalar<int>(con, "calculatefinishedpercent",param:p, commandType:CommandType.StoredProcedure);
+            return percent;
+        }
+
+        public bool DeleteAllItem(DeleteAllItem model)
+        {
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@todoid",model.todoid);
+            bool result = SqlMapper.ExecuteScalar<bool>(con,"dropallitem",param:p,commandType:CommandType.StoredProcedure);
+            return result;
+        }
+
         public bool DeleteItem(int Id)
         {
-            throw new NotImplementedException();
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@Id",Id);
+            bool result = SqlMapper.ExecuteScalar<bool>(con,"deleteitem",param:p,commandType:CommandType.StoredProcedure);
+            return result;
         }
 
         public IEnumerable<Item> Items(int Id)
@@ -29,14 +48,20 @@ namespace Repo
 
         public Item ModItem(ModItem model)
         {
-            throw new NotImplementedException();
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@Id",model.Id);
+            p.Add("@name",model.ItemName);
+            p.Add("@status",model.isfinished);
+
+            Item modedItem = SqlMapper.Query<Item>(con, "moditem",param:p,commandType:CommandType.StoredProcedure).First();
+            return modedItem;
         }
 
         public Item NewItem(newitem model)
         {
             DynamicParameters p = new DynamicParameters();
             p.Add("@TodoId",model.todoid);
-            p.Add("@Name",model.name);
+            p.Add("@Name",model.ItemName);
             Item newitem = SqlMapper.Query<Item>(con,"NewItem",param:p,commandType:CommandType.StoredProcedure).First();;
             return newitem;
         }

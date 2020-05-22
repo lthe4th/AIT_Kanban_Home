@@ -9,9 +9,10 @@ namespace RepoInterface
 {
     public interface ITodoRepo
     {
-        IEnumerable<Todo> Todos();
+        IEnumerable<Todo> Todos(int id);
         Todo NewTodo(NewTodo model);
         Todo ModTodo(ModTodo model);
         bool DeleteTodo(int Id);
+        bool DeleteAllTodo(DeleteAllTodo model);
     }
 }

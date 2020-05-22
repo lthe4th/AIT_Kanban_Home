@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MvOtV+ptG4XxBd4Sl2HTz0v3aCQGJgxTtcDFAOTbkYhU5pbonxStCIfrmdSCf53++sNSoQ7i8n8UvRqwv8hrgQ==",
+  "dgSpecHash": "t5hZykT6zdqyvfynCMvtZtL4XYzYE5ajVVsWdwwcmlNu/KSKDsv95Fy+NfVs6fM4yRN/sRGrjcPgCDrkVpeMkg==",
   "success": true,
-  "projectFilePath": "G:\\Ait miniproject[KANBAN]\\API\\Services\\Services.csproj",
+  "projectFilePath": "D:\\AIT_Kanban_Home\\API\\Services\\Services.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

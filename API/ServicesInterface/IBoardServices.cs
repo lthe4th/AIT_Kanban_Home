@@ -14,5 +14,6 @@ namespace ServicesInterface
         Board NewBoard(NewBoard model);
         Board ModBoard(Modboard model);
         bool DeleteBoard(int Id);
+        bool ClearAll();
     }
 }

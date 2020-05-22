@@ -17,14 +17,20 @@ namespace Services
         {
             this.repo = repo;
         }
+
+        public bool DeleteAllTodo(DeleteAllTodo model)
+        {
+            return this.repo.DeleteAllTodo(model);
+        }
+
         public bool DeleteTodo(int Id)
         {
-            throw new NotImplementedException();
+            return this.repo.DeleteTodo(Id);
         }
 
         public Todo ModTodo(ModTodo model)
         {
-            throw new NotImplementedException();
+            return this.repo.ModTodo(model);
         }
 
         public Todo NewTodo(NewTodo model)
@@ -32,9 +38,9 @@ namespace Services
             return this.repo.NewTodo(model);
         }
 
-        public IEnumerable<Todo> Todos()
+        public IEnumerable<Todo> Todos(int Id)
         {
-            return this.repo.Todos();
+            return this.repo.Todos(Id);
         }
     }
 }

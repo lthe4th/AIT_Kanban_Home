@@ -25,11 +25,30 @@ namespace Kanban.Controllers
             return this.ser.Items(Id);
         }
         [HttpPost]
-        [Route("api/items/NewItem")]
+        [Route("api/items/new")]
         public Item NewItem([FromBody] newitem model){
             return this.ser.NewItem(model);
         }
-        // [HttpPut("{id}")]
-        // [HttpDelete("{id}")]
+        [HttpPut]
+        [Route("api/items/mod")]
+        public Item ModItem([FromBody] ModItem model){
+            return this.ser.ModItem(model);
+        }
+        [HttpDelete]
+        [Route("api/items/delete/{Id}")]
+        public bool DeleteItem(int Id){
+            return this.ser.DeleteItem(Id);
+        }
+        [HttpGet]
+        [Route("api/items/{Id}")]
+        public int CalculatePercent(int Id){
+            return this.ser.CalculatedPercent(Id);
+        }
+
+        [HttpDelete]
+        [Route("api/items/delete/all")]
+        public bool DeleteAllItem([FromBody] DeleteAllItem model){
+            return this.ser.DeleteAllItem(model);
+        }
     }
 }

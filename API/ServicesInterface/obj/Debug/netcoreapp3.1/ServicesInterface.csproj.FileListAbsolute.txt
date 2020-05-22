@@ -12,3 +12,17 @@ G:\Ait miniproject[KANBAN]\API\ServicesInterface\bin\Debug\netcoreapp3.1\RepoInt
 G:\Ait miniproject[KANBAN]\API\ServicesInterface\bin\Debug\netcoreapp3.1\Models.pdb
 G:\Ait miniproject[KANBAN]\API\ServicesInterface\bin\Debug\netcoreapp3.1\RepoInterface.pdb
 G:\Ait miniproject[KANBAN]\API\ServicesInterface\obj\Debug\netcoreapp3.1\ServicesInterface.csproj.CopyComplete
+D:\AIT_Kanban_Home\API\ServicesInterface\bin\Debug\netcoreapp3.1\ServicesInterface.deps.json
+D:\AIT_Kanban_Home\API\ServicesInterface\bin\Debug\netcoreapp3.1\ServicesInterface.dll
+D:\AIT_Kanban_Home\API\ServicesInterface\bin\Debug\netcoreapp3.1\ServicesInterface.pdb
+D:\AIT_Kanban_Home\API\ServicesInterface\bin\Debug\netcoreapp3.1\Models.dll
+D:\AIT_Kanban_Home\API\ServicesInterface\bin\Debug\netcoreapp3.1\RepoInterface.dll
+D:\AIT_Kanban_Home\API\ServicesInterface\bin\Debug\netcoreapp3.1\Models.pdb
+D:\AIT_Kanban_Home\API\ServicesInterface\bin\Debug\netcoreapp3.1\RepoInterface.pdb
+D:\AIT_Kanban_Home\API\ServicesInterface\obj\Debug\netcoreapp3.1\ServicesInterface.csprojAssemblyReference.cache
+D:\AIT_Kanban_Home\API\ServicesInterface\obj\Debug\netcoreapp3.1\ServicesInterface.csproj.CoreCompileInputs.cache
+D:\AIT_Kanban_Home\API\ServicesInterface\obj\Debug\netcoreapp3.1\ServicesInterface.AssemblyInfoInputs.cache
+D:\AIT_Kanban_Home\API\ServicesInterface\obj\Debug\netcoreapp3.1\ServicesInterface.AssemblyInfo.cs
+D:\AIT_Kanban_Home\API\ServicesInterface\obj\Debug\netcoreapp3.1\ServicesInterface.csproj.CopyComplete
+D:\AIT_Kanban_Home\API\ServicesInterface\obj\Debug\netcoreapp3.1\ServicesInterface.dll
+D:\AIT_Kanban_Home\API\ServicesInterface\obj\Debug\netcoreapp3.1\ServicesInterface.pdb

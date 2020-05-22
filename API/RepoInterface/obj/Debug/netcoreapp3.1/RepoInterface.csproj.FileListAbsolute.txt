@@ -10,3 +10,15 @@ g:\Ait miniproject[KANBAN]\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterfa
 g:\Ait miniproject[KANBAN]\API\RepoInterface\bin\Debug\netcoreapp3.1\Models.dll
 g:\Ait miniproject[KANBAN]\API\RepoInterface\bin\Debug\netcoreapp3.1\Models.pdb
 g:\Ait miniproject[KANBAN]\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.csproj.CopyComplete
+D:\AIT_Kanban_Home\API\RepoInterface\bin\Debug\netcoreapp3.1\RepoInterface.deps.json
+D:\AIT_Kanban_Home\API\RepoInterface\bin\Debug\netcoreapp3.1\RepoInterface.dll
+D:\AIT_Kanban_Home\API\RepoInterface\bin\Debug\netcoreapp3.1\RepoInterface.pdb
+D:\AIT_Kanban_Home\API\RepoInterface\bin\Debug\netcoreapp3.1\Models.dll
+D:\AIT_Kanban_Home\API\RepoInterface\bin\Debug\netcoreapp3.1\Models.pdb
+D:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.csprojAssemblyReference.cache
+D:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.csproj.CoreCompileInputs.cache
+D:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.AssemblyInfoInputs.cache
+D:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.AssemblyInfo.cs
+D:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.csproj.CopyComplete
+D:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.dll
+D:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.pdb

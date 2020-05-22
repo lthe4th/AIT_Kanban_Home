@@ -8,6 +8,6 @@ namespace Models.Request
     public class NewTodo
     {
         public int boardid { get; set; }
-        public string name { get; set; }
+        public string TodoName { get; set; }
     }
 }

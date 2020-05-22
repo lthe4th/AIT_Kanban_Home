@@ -1,28 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Ait miniproject[KANBAN]\\API\\Models\\Models.csproj": {}
+    "D:\\AIT_Kanban_Home\\API\\Models\\Models.csproj": {}
   },
   "projects": {
-    "G:\\Ait miniproject[KANBAN]\\API\\Models\\Models.csproj": {
+    "D:\\AIT_Kanban_Home\\API\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Ait miniproject[KANBAN]\\API\\Models\\Models.csproj",
+        "projectUniqueName": "D:\\AIT_Kanban_Home\\API\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "G:\\Ait miniproject[KANBAN]\\API\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\lynth\\.nuget\\packages\\",
-        "outputPath": "G:\\Ait miniproject[KANBAN]\\API\\Models\\obj\\",
+        "projectPath": "D:\\AIT_Kanban_Home\\API\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\longpkd\\.nuget\\packages\\",
+        "outputPath": "D:\\AIT_Kanban_Home\\API\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\lynth\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\longpkd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

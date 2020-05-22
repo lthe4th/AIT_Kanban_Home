@@ -1,0 +1,10 @@
+<mat-card-content>
+    <div *ngIf="todos">
+        <div class="Todos" *ngFor="let todo of todos">
+            <button class="btn" (click)="OpenDetail(todo)">{{todo.todoName}}</button>
+        </div>
+    </div>
+</mat-card-content>
+<mat-card-actions>
+    <app-new-todo (NewTodoEvent)="ReceivedNewTodo($event)" [BoardId]="this.Id"></app-new-todo>
+</mat-card-actions>

@@ -22,14 +22,19 @@ namespace Services
             return this.repo.Boards();
         }
 
+        public bool ClearAll()
+        {
+            return this.repo.ClearAll();
+        }
+
         public bool DeleteBoard(int Id)
         {
-            throw new NotImplementedException();
+            return this.repo.DeleteBoard(Id);
         }
 
         public Board ModBoard(Modboard model)
         {
-            throw new NotImplementedException();
+            return this.repo.ModBoard(model);
         }
 
         public Board NewBoard(NewBoard model)

@@ -7,6 +7,6 @@ namespace Models.Request
 {
    public class NewBoard
     {
-        public string Name { get; set; }        
+        public string BoardName { get; set; }        
     }
 }

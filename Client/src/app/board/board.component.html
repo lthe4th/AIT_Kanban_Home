@@ -1,0 +1,42 @@
+<mat-sidenav-container>
+    <mat-sidenav>Start</mat-sidenav>
+    <mat-sidenav-content>
+        <header>
+
+        </header>
+        <body>
+            <div class="container-fluid">
+                <div class="row">
+                    <mat-card class="Board col-12 col-md-2" *ngFor="let board of boards">
+                        <mat-card-header>
+                            <mat-card-title>{{board.boardName}}</mat-card-title>
+                            <button class="btn btn-outline-danger" (click)="DeleteBoard(board.id)"><mat-icon>delete</mat-icon></button>
+                        </mat-card-header>
+                            <app-todo [Id]="board.id"></app-todo>
+                    </mat-card>
+
+                    <mat-expansion-panel class="col-md-2 newboard">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                New Board
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div class="inputfield">
+                            <mat-form-field>
+                                <mat-label >Name</mat-label>
+                                <input matInput #newboardname> 
+                            </mat-form-field>
+                            <button class="btn btn-success" (click)="NewBoard(newboardname.value)"><mat-icon>add</mat-icon></button>
+                        </div>
+
+                    </mat-expansion-panel>
+
+
+                </div>
+            </div>
+        </body>
+        <footer>
+
+        </footer>
+    </mat-sidenav-content>
+</mat-sidenav-container>

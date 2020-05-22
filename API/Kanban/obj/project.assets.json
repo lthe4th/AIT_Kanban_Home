@@ -643,47 +643,49 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lynth\\.nuget\\packages\\": {},
+    "C:\\Users\\longpkd\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Ait miniproject[KANBAN]\\API\\Kanban\\Kanban.csproj",
+      "projectUniqueName": "D:\\AIT_Kanban_Home\\API\\Kanban\\Kanban.csproj",
       "projectName": "Kanban",
-      "projectPath": "G:\\Ait miniproject[KANBAN]\\API\\Kanban\\Kanban.csproj",
-      "packagesPath": "C:\\Users\\lynth\\.nuget\\packages\\",
-      "outputPath": "G:\\Ait miniproject[KANBAN]\\API\\Kanban\\obj\\",
+      "projectPath": "D:\\AIT_Kanban_Home\\API\\Kanban\\Kanban.csproj",
+      "packagesPath": "C:\\Users\\longpkd\\.nuget\\packages\\",
+      "outputPath": "D:\\AIT_Kanban_Home\\API\\Kanban\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\lynth\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\longpkd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "G:\\Ait miniproject[KANBAN]\\API\\Models\\Models.csproj": {
-              "projectPath": "G:\\Ait miniproject[KANBAN]\\API\\Models\\Models.csproj"
+            "D:\\AIT_Kanban_Home\\API\\Models\\Models.csproj": {
+              "projectPath": "D:\\AIT_Kanban_Home\\API\\Models\\Models.csproj"
             },
-            "G:\\Ait miniproject[KANBAN]\\API\\RepoInterface\\RepoInterface.csproj": {
-              "projectPath": "G:\\Ait miniproject[KANBAN]\\API\\RepoInterface\\RepoInterface.csproj"
+            "D:\\AIT_Kanban_Home\\API\\RepoInterface\\RepoInterface.csproj": {
+              "projectPath": "D:\\AIT_Kanban_Home\\API\\RepoInterface\\RepoInterface.csproj"
             },
-            "G:\\Ait miniproject[KANBAN]\\API\\Repo\\Repo.csproj": {
-              "projectPath": "G:\\Ait miniproject[KANBAN]\\API\\Repo\\Repo.csproj"
+            "D:\\AIT_Kanban_Home\\API\\Repo\\Repo.csproj": {
+              "projectPath": "D:\\AIT_Kanban_Home\\API\\Repo\\Repo.csproj"
             },
-            "G:\\Ait miniproject[KANBAN]\\API\\ServicesInterface\\ServicesInterface.csproj": {
-              "projectPath": "G:\\Ait miniproject[KANBAN]\\API\\ServicesInterface\\ServicesInterface.csproj"
+            "D:\\AIT_Kanban_Home\\API\\ServicesInterface\\ServicesInterface.csproj": {
+              "projectPath": "D:\\AIT_Kanban_Home\\API\\ServicesInterface\\ServicesInterface.csproj"
             },
-            "G:\\Ait miniproject[KANBAN]\\API\\Services\\Services.csproj": {
-              "projectPath": "G:\\Ait miniproject[KANBAN]\\API\\Services\\Services.csproj"
+            "D:\\AIT_Kanban_Home\\API\\Services\\Services.csproj": {
+              "projectPath": "D:\\AIT_Kanban_Home\\API\\Services\\Services.csproj"
             }
           }
         }

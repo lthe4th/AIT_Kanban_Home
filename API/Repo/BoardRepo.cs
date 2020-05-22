@@ -18,20 +18,34 @@ namespace Repo
             return boards;
         }
 
+        public bool ClearAll()
+        {
+            bool result = SqlMapper.ExecuteScalar<bool>(con,"dropallboard",commandType:CommandType.StoredProcedure);
+            return result;
+        }
+
         public bool DeleteBoard(int Id)
         {
-            throw new NotImplementedException();
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@Id",Id);
+            bool result = SqlMapper.ExecuteScalar<bool>(con,"deleteboard",param:p, commandType:CommandType.StoredProcedure);
+            return result;
         }
 
         public Board ModBoard(Modboard model)
         {
-            throw new NotImplementedException();
+            DynamicParameters p = new DynamicParameters();
+            p.Add("@Id",model.Id);
+            p.Add("@name",model.BoardName);
+
+            Board ModedBoard = SqlMapper.Query(con,"modboard",param:p,commandType:CommandType.StoredProcedure).First();
+            return ModedBoard;
         }
 
         public Board NewBoard(NewBoard model)
         {
             DynamicParameters p = new DynamicParameters();
-            p.Add("@name", model.Name);
+            p.Add("@name", model.BoardName);
             Board newboard = SqlMapper.Query<Board>(con, "NewBoard", param: p, commandType: CommandType.StoredProcedure).First();
             return newboard;
         }

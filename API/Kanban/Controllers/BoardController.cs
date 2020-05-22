@@ -25,12 +25,26 @@ namespace Kanban.Controllers
             return this.ser.Boards();
         }
         [HttpPost]
-        [Route("api/boards/NewBoard")]
+        [Route("api/boards/new")]
 
         public Board NewBoard([FromBody] NewBoard model){
             return this.ser.NewBoard(model);
         }
-        // [HttpPut("{id}")]
-        // [HttpDelete("{id}")]
+        [HttpPut]
+        [Route("api/boards/mod")]
+        public Board ModBoard([FromBody] Modboard model){
+            return this.ser.ModBoard(model);
+        }
+        [HttpDelete]
+        [Route("api/boards/delete/{Id}")]
+        public bool DeleteBoard(int Id){
+            return this.ser.DeleteBoard(Id);
+        }
+
+        [HttpDelete]
+        [Route("api/boards/clear")]
+        public bool ClearAll(){
+            return this.ser.ClearAll();
+        }
     }
 }

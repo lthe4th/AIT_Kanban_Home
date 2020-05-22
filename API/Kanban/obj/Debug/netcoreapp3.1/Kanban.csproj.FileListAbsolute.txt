@@ -36,3 +36,41 @@ G:\Ait miniproject[KANBAN]\API\Kanban\bin\Debug\netcoreapp3.1\RepoInterface.pdb
 G:\Ait miniproject[KANBAN]\API\Kanban\bin\Debug\netcoreapp3.1\Services.pdb
 G:\Ait miniproject[KANBAN]\API\Kanban\bin\Debug\netcoreapp3.1\ServicesInterface.pdb
 G:\Ait miniproject[KANBAN]\API\Kanban\obj\Debug\netcoreapp3.1\Kanban.csproj.CopyComplete
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\appsettings.json
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\Kanban.exe
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\Kanban.deps.json
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\Kanban.runtimeconfig.json
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\Kanban.runtimeconfig.dev.json
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\Kanban.dll
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\Kanban.pdb
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\Dapper.dll
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\Models.dll
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\Repo.dll
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\RepoInterface.dll
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\Services.dll
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\ServicesInterface.dll
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\Models.pdb
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\Repo.pdb
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\RepoInterface.pdb
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\Services.pdb
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\ServicesInterface.pdb
+D:\AIT_Kanban_Home\API\Kanban\obj\Debug\netcoreapp3.1\Kanban.csprojAssemblyReference.cache
+D:\AIT_Kanban_Home\API\Kanban\obj\Debug\netcoreapp3.1\Kanban.csproj.CoreCompileInputs.cache
+D:\AIT_Kanban_Home\API\Kanban\obj\Debug\netcoreapp3.1\Kanban.MvcApplicationPartsAssemblyInfo.cache
+D:\AIT_Kanban_Home\API\Kanban\obj\Debug\netcoreapp3.1\Kanban.AssemblyInfoInputs.cache
+D:\AIT_Kanban_Home\API\Kanban\obj\Debug\netcoreapp3.1\Kanban.AssemblyInfo.cs
+D:\AIT_Kanban_Home\API\Kanban\obj\Debug\netcoreapp3.1\Kanban.RazorTargetAssemblyInfo.cache
+D:\AIT_Kanban_Home\API\Kanban\obj\Debug\netcoreapp3.1\Kanban.csproj.CopyComplete
+D:\AIT_Kanban_Home\API\Kanban\obj\Debug\netcoreapp3.1\staticwebassets\Kanban.StaticWebAssets.Manifest.cache
+D:\AIT_Kanban_Home\API\Kanban\obj\Debug\netcoreapp3.1\staticwebassets\Kanban.StaticWebAssets.xml
+D:\AIT_Kanban_Home\API\Kanban\obj\Debug\netcoreapp3.1\Kanban.dll
+D:\AIT_Kanban_Home\API\Kanban\obj\Debug\netcoreapp3.1\Kanban.pdb
+D:\AIT_Kanban_Home\API\Kanban\obj\Debug\netcoreapp3.1\Kanban.genruntimeconfig.cache

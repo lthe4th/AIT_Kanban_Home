@@ -9,9 +9,10 @@ namespace ServicesInterface
 {
     public interface ITodoServices
     {
-        IEnumerable<Todo> Todos();
+        IEnumerable<Todo> Todos(int Id);
         Todo NewTodo(NewTodo model);
         Todo ModTodo(ModTodo model);
         bool DeleteTodo(int Id);
+        bool DeleteAllTodo(DeleteAllTodo model);
     }
 }

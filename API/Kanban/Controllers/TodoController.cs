@@ -19,16 +19,34 @@ namespace Kanban.Controllers
             this.ser = ser;
         }
         [HttpGet]
-        [Route("api/todos")]
-        public IEnumerable<Todo> Todos() {
-            return this.ser.Todos();
+        [Route("api/todos/board/{Id}")]
+        public IEnumerable<Todo> Todos(int Id)
+        {
+            return this.ser.Todos(Id);
         }
         [HttpPost]
-        [Route("api/todos/NewTodo")]
-        public Todo NewToDo([FromBody] NewTodo model){
+        [Route("api/todos/new")]
+        public Todo NewToDo([FromBody] NewTodo model)
+        {
             return this.ser.NewTodo(model);
         }
-        // [HttpPut("{id}")]
-        // [HttpDelete("{id}")]
+        [HttpPut]
+        [Route("api/todos/mod")]
+        public Todo ModTodo([FromBody] ModTodo model)
+        {
+            return this.ser.ModTodo(model);
+        }
+        [HttpDelete]
+        [Route("api/todos/delete/{Id}")]
+        public bool DeleteTodo(int Id)
+        {
+            return this.ser.DeleteTodo(Id);
+        }
+
+        [HttpDelete]
+        [Route("api/todos/delete/all")]
+        public bool DeleteAllTodo([FromBody] DeleteAllTodo model){
+            return this.ser.DeleteAllTodo(model);
+        }   
     }
 }

@@ -14,5 +14,7 @@ namespace RepoInterface
         Item NewItem(newitem model);
         Item ModItem(ModItem model);
         bool DeleteItem(int Id);
+        int CalculatedPercent(int Id);
+        bool DeleteAllItem(DeleteAllItem model);
     }
 }
