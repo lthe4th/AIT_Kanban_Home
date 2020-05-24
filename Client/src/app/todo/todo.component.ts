@@ -24,11 +24,23 @@ export class TodoComponent implements OnInit {
     this.todo.Todos(Id).subscribe(data => this.todos = data);
   }
 
-  OpenDetail(toSend : Todo) {
-    const dialogRef = this.dialog.open(TodoDetailComponent,{
+  OpenDetail(toSend: Todo) {
+    const dialogRef = this.dialog.open(TodoDetailComponent, {
       data: toSend,
       width: "80vw",
       height: "80vh"
+    })
+    dialogRef.afterClosed().subscribe(data => {
+      if (typeof (data) === "number") {
+        this.todos = this.todos.filter(each => each.id !== data)
+      }
+      else if (typeof (data) === "object") {
+        this.todos.filter(each => {
+          if (each.id = data.id) {
+            each.todoName = data.todoName
+          }
+        })
+      }
     })
   }
 

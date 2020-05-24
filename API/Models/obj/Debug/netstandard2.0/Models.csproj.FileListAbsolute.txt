@@ -16,3 +16,12 @@ D:\AIT_Kanban_Home\API\Models\obj\Debug\netstandard2.0\Models.AssemblyInfoInputs
 D:\AIT_Kanban_Home\API\Models\obj\Debug\netstandard2.0\Models.AssemblyInfo.cs
 D:\AIT_Kanban_Home\API\Models\obj\Debug\netstandard2.0\Models.dll
 D:\AIT_Kanban_Home\API\Models\obj\Debug\netstandard2.0\Models.pdb
+G:\AIT_Kanban_Home\API\Models\bin\Debug\netstandard2.0\Models.deps.json
+G:\AIT_Kanban_Home\API\Models\bin\Debug\netstandard2.0\Models.dll
+G:\AIT_Kanban_Home\API\Models\bin\Debug\netstandard2.0\Models.pdb
+G:\AIT_Kanban_Home\API\Models\obj\Debug\netstandard2.0\Models.csprojAssemblyReference.cache
+G:\AIT_Kanban_Home\API\Models\obj\Debug\netstandard2.0\Models.csproj.CoreCompileInputs.cache
+G:\AIT_Kanban_Home\API\Models\obj\Debug\netstandard2.0\Models.AssemblyInfoInputs.cache
+G:\AIT_Kanban_Home\API\Models\obj\Debug\netstandard2.0\Models.AssemblyInfo.cs
+G:\AIT_Kanban_Home\API\Models\obj\Debug\netstandard2.0\Models.dll
+G:\AIT_Kanban_Home\API\Models\obj\Debug\netstandard2.0\Models.pdb

@@ -38,7 +38,7 @@ namespace Repo
             p.Add("@Id",model.Id);
             p.Add("@name",model.BoardName);
 
-            Board ModedBoard = SqlMapper.Query(con,"modboard",param:p,commandType:CommandType.StoredProcedure).First();
+            Board ModedBoard = SqlMapper.Query<Board>(con,"modboard",param:p,commandType:CommandType.StoredProcedure).First();
             return ModedBoard;
         }
 

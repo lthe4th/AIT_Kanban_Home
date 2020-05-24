@@ -12,9 +12,9 @@ export class CheckListComponent implements OnInit {
   @Input() todoId: number
   constructor(private item: ItemService) { }
   checkList: Item[] = [];
-  Percent: number;
-  numberofitem = 0;
-  numberOfItemFinished = 0;
+  percentOfFinished: number;
+  // numberofitem = 0;
+  // numberOfItemFinished = 0;
   ngOnInit() {
     this.Items(this.todoId);
   }
@@ -27,22 +27,17 @@ export class CheckListComponent implements OnInit {
   }
 
   CalculatePercent() {
-    this.getNumberOfFinishedItem();
-    this.getNumbersOfItem();
-    this.Percent = this.numberOfItemFinished / this.numberofitem * 100
-  }
-
-  getNumberOfFinishedItem() {
-    this.checkList.forEach(item => {
-      if (item.isfinished) {
-        this.numberOfItemFinished += 1;
+    var count = 0;
+    this.checkList.forEach(element => {
+      if (element.isfinished) {
+        count = count + 1;
       }
     });
+    this.percentOfFinished = count / this.checkList.length * 100
+
+    // this.percentOfFinished = this.numberOfItemFinished/this.numberofitem*100
   }
 
-  getNumbersOfItem() {
-    this.numberofitem = this.checkList.length
-  }
 
   NewItem(Id: number, name: string) {
     if (name === "") {
@@ -59,7 +54,18 @@ export class CheckListComponent implements OnInit {
 
 
 
-  UpdateStatus(Id: number) {
+  UpdateStatus(name: string, id: number, status: boolean) {
+    const item2 = new Item();
+    item2.id = id;
+    item2.itemName = name;
+    item2.isfinished = status;
+    // console.log(`${JSON.stringify(item2)}`)
+    this.item.ModItem(item2).subscribe(result => this.checkList.filter(each => {
+      if (each.id === item2.id) {
+        each.isfinished = !each.isfinished;
+        this.CalculatePercent();
+      }
+    }))
 
   }
 

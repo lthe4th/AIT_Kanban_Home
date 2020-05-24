@@ -12,13 +12,6 @@ namespace Repo
 {
     public class ItemRepo : BaseRepo, IItemRepo
     {
-        public int CalculatedPercent(int Id)
-        {
-            DynamicParameters p = new DynamicParameters();
-            p.Add("Id",Id);
-            int percent = SqlMapper.ExecuteScalar<int>(con, "calculatefinishedpercent",param:p, commandType:CommandType.StoredProcedure);
-            return percent;
-        }
 
         public bool DeleteAllItem(DeleteAllItem model)
         {

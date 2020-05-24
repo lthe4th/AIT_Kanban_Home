@@ -1,16 +1,18 @@
 <p>confirm-dialog works!</p>
-<div class="DeleteConfirm" *ngIf="data.Id===1">
+<div class="DeleteConfirm" *ngIf="data.CC.Id===1">
     <img src="" alt="">
     <button class="btn" [mat-dialog-close]="result">
         <mat-icon>check</mat-icon>
     </button>
-    <button class="btn" (click)="closeDialog()">
+    <button class="btn" [mat-dialog-close]>
         <mat-icon>close</mat-icon>
     </button>
 </div>
-<div class="EditBoardName" *ngIf="data.Id===2">
-
-</div>
-<div class="EditTaskName" *ngIf="data.Id===3">
-
+<div class="EditBoardName" *ngIf="data.CC.Id===2">
+    <mat-form-field>
+        <input matInput placeholder="New Name" value="{{data.board.boardName}}" #NewBoardName>
+        <button mat-button mat-icon-button matSuffix (click)="ModName(NewBoardName.value)" >
+            <mat-icon>save</mat-icon>
+        </button>
+    </mat-form-field>
 </div>

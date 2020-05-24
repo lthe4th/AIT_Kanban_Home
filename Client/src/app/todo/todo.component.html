@@ -1,7 +1,7 @@
 <mat-card-content>
     <div *ngIf="todos">
         <div class="Todos" *ngFor="let todo of todos">
-            <button class="btn" (click)="OpenDetail(todo)">{{todo.todoName}}</button>
+            <button mat-raised-button (click)="OpenDetail(todo)">{{todo.todoName}}</button>
         </div>
     </div>
 </mat-card-content>

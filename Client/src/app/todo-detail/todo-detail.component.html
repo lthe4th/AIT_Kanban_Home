@@ -1,6 +1,16 @@
 <div class="container-fluid">
-    <h1 mat-dialog-title>{{data.todoName}}</h1>
+    <div>
+        <mat-form-field>
+            <input matInput type="text" value="{{data.todoName}}"  #newTodoName>
+            <button mat-button matSuffix mat-icon-button (click)="changeTodoName(newTodoName.value)">
+                <mat-icon>save</mat-icon>
+            </button>
+        </mat-form-field>
+    </div>
     <div mat-dialog-content class="container">
         <app-check-list [todoId]="data.id"></app-check-list>
     </div>
+    <div mat-dialog-actions>
+        <button mat-raised-button color="warn" (click)="deleteThisTask()">Delete this Task</button>
+      </div>
 </div>

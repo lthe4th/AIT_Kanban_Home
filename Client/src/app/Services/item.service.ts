@@ -19,18 +19,13 @@ export class ItemService {
   GetItems(Id: number): Observable<Item[]> {
     return this.http.get<Item[]>(`${this.apiurl}/${Id}`)
   }
-
   NewItem(newItem: Item): Observable<Item> {
-    return this.http.post<Item>(`${this.apiurl}/new`, newItem, httpOption);
+    return this.http.post<Item>(`${this.apiurl}/new`, newItem, httpOption)
   }
-
   ModItem(moditem: Item): Observable<Item> {
     return this.http.put<Item>(`${this.apiurl}/mod`, moditem, httpOption);
   }
   DeleteItem(Id: number): Observable<boolean> {
     return this.http.delete<boolean>(`${this.apiurl}/delete/${Id}`);
-  }
-  getcalculatenumber(Id: number): Observable<number> {
-    return this.http.get<number>(`${this.apiurl}/${Id}`);
   }
 }

@@ -39,11 +39,6 @@ namespace Kanban.Controllers
         public bool DeleteItem(int Id){
             return this.ser.DeleteItem(Id);
         }
-        [HttpGet]
-        [Route("api/items/{Id}")]
-        public int CalculatePercent(int Id){
-            return this.ser.CalculatedPercent(Id);
-        }
 
         [HttpDelete]
         [Route("api/items/delete/all")]

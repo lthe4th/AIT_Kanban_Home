@@ -4,15 +4,17 @@
         <header>
 
         </header>
+
         <body>
             <div class="container-fluid">
                 <div class="row">
                     <mat-card class="Board col-12 col-md-2" *ngFor="let board of boards">
                         <mat-card-header>
                             <mat-card-title>{{board.boardName}}</mat-card-title>
-                            <button class="btn btn-outline-danger" (click)="DeleteBoard(board.id)"><mat-icon>delete</mat-icon></button>
+                            <button mat-button mat-flat-button [matMenuTriggerData]="board" [matMenuTriggerFor]="boardmenu"><mat-icon>expand_more</mat-icon></button>
+
                         </mat-card-header>
-                            <app-todo [Id]="board.id"></app-todo>
+                        <app-todo [Id]="board.id"></app-todo>
                     </mat-card>
 
                     <mat-expansion-panel class="col-md-2 newboard">
@@ -23,10 +25,12 @@
                         </mat-expansion-panel-header>
                         <div class="inputfield">
                             <mat-form-field>
-                                <mat-label >Name</mat-label>
-                                <input matInput #newboardname> 
+                                <mat-label>Name</mat-label>
+                                <input matInput #newboardname>
                             </mat-form-field>
-                            <button class="btn btn-success" (click)="NewBoard(newboardname.value)"><mat-icon>add</mat-icon></button>
+                            <button class="btn btn-success" (click)="NewBoard(newboardname.value)">
+                                <mat-icon>add</mat-icon>
+                            </button>
                         </div>
 
                     </mat-expansion-panel>
@@ -40,3 +44,14 @@
         </footer>
     </mat-sidenav-content>
 </mat-sidenav-container>
+
+<mat-menu #boardmenu="matMenu">
+    <ng-template matMenuContent let-id="id" let-name="boardName">
+        <button mat-menu-item (click)="ModBoard(name,id)"><span>
+                <mat-icon>edit</mat-icon>
+            </span>ChangeName</button>
+        <button mat-menu-item (click)="DeleteBoard(id)"><span>
+                <mat-icon>delete</mat-icon>
+            </span>Delete</button>
+    </ng-template>
+</mat-menu>

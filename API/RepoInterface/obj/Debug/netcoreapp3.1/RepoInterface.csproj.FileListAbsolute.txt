@@ -22,3 +22,15 @@ D:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.Assem
 D:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.csproj.CopyComplete
 D:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.dll
 D:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.pdb
+G:\AIT_Kanban_Home\API\RepoInterface\bin\Debug\netcoreapp3.1\RepoInterface.deps.json
+G:\AIT_Kanban_Home\API\RepoInterface\bin\Debug\netcoreapp3.1\RepoInterface.dll
+G:\AIT_Kanban_Home\API\RepoInterface\bin\Debug\netcoreapp3.1\RepoInterface.pdb
+G:\AIT_Kanban_Home\API\RepoInterface\bin\Debug\netcoreapp3.1\Models.dll
+G:\AIT_Kanban_Home\API\RepoInterface\bin\Debug\netcoreapp3.1\Models.pdb
+G:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.csprojAssemblyReference.cache
+G:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.csproj.CoreCompileInputs.cache
+G:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.AssemblyInfoInputs.cache
+G:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.AssemblyInfo.cs
+G:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.csproj.CopyComplete
+G:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.dll
+G:\AIT_Kanban_Home\API\RepoInterface\obj\Debug\netcoreapp3.1\RepoInterface.pdb

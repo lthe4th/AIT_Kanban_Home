@@ -1,30 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AIT_Kanban_Home\\API\\ServicesInterface\\ServicesInterface.csproj": {}
+    "G:\\AIT_Kanban_Home\\API\\ServicesInterface\\ServicesInterface.csproj": {}
   },
   "projects": {
-    "D:\\AIT_Kanban_Home\\API\\Models\\Models.csproj": {
+    "G:\\AIT_Kanban_Home\\API\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AIT_Kanban_Home\\API\\Models\\Models.csproj",
+        "projectUniqueName": "G:\\AIT_Kanban_Home\\API\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "D:\\AIT_Kanban_Home\\API\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\longpkd\\.nuget\\packages\\",
-        "outputPath": "D:\\AIT_Kanban_Home\\API\\Models\\obj\\",
+        "projectPath": "G:\\AIT_Kanban_Home\\API\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\lynth\\.nuget\\packages\\",
+        "outputPath": "G:\\AIT_Kanban_Home\\API\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\longpkd\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\lynth\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -62,34 +60,32 @@
         }
       }
     },
-    "D:\\AIT_Kanban_Home\\API\\RepoInterface\\RepoInterface.csproj": {
+    "G:\\AIT_Kanban_Home\\API\\RepoInterface\\RepoInterface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AIT_Kanban_Home\\API\\RepoInterface\\RepoInterface.csproj",
+        "projectUniqueName": "G:\\AIT_Kanban_Home\\API\\RepoInterface\\RepoInterface.csproj",
         "projectName": "RepoInterface",
-        "projectPath": "D:\\AIT_Kanban_Home\\API\\RepoInterface\\RepoInterface.csproj",
-        "packagesPath": "C:\\Users\\longpkd\\.nuget\\packages\\",
-        "outputPath": "D:\\AIT_Kanban_Home\\API\\RepoInterface\\obj\\",
+        "projectPath": "G:\\AIT_Kanban_Home\\API\\RepoInterface\\RepoInterface.csproj",
+        "packagesPath": "C:\\Users\\lynth\\.nuget\\packages\\",
+        "outputPath": "G:\\AIT_Kanban_Home\\API\\RepoInterface\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\longpkd\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\lynth\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\AIT_Kanban_Home\\API\\Models\\Models.csproj": {
-                "projectPath": "D:\\AIT_Kanban_Home\\API\\Models\\Models.csproj"
+              "G:\\AIT_Kanban_Home\\API\\Models\\Models.csproj": {
+                "projectPath": "G:\\AIT_Kanban_Home\\API\\Models\\Models.csproj"
               }
             }
           }
@@ -121,37 +117,35 @@
         }
       }
     },
-    "D:\\AIT_Kanban_Home\\API\\ServicesInterface\\ServicesInterface.csproj": {
+    "G:\\AIT_Kanban_Home\\API\\ServicesInterface\\ServicesInterface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AIT_Kanban_Home\\API\\ServicesInterface\\ServicesInterface.csproj",
+        "projectUniqueName": "G:\\AIT_Kanban_Home\\API\\ServicesInterface\\ServicesInterface.csproj",
         "projectName": "ServicesInterface",
-        "projectPath": "D:\\AIT_Kanban_Home\\API\\ServicesInterface\\ServicesInterface.csproj",
-        "packagesPath": "C:\\Users\\longpkd\\.nuget\\packages\\",
-        "outputPath": "D:\\AIT_Kanban_Home\\API\\ServicesInterface\\obj\\",
+        "projectPath": "G:\\AIT_Kanban_Home\\API\\ServicesInterface\\ServicesInterface.csproj",
+        "packagesPath": "C:\\Users\\lynth\\.nuget\\packages\\",
+        "outputPath": "G:\\AIT_Kanban_Home\\API\\ServicesInterface\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\longpkd\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\lynth\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\AIT_Kanban_Home\\API\\Models\\Models.csproj": {
-                "projectPath": "D:\\AIT_Kanban_Home\\API\\Models\\Models.csproj"
+              "G:\\AIT_Kanban_Home\\API\\Models\\Models.csproj": {
+                "projectPath": "G:\\AIT_Kanban_Home\\API\\Models\\Models.csproj"
               },
-              "D:\\AIT_Kanban_Home\\API\\RepoInterface\\RepoInterface.csproj": {
-                "projectPath": "D:\\AIT_Kanban_Home\\API\\RepoInterface\\RepoInterface.csproj"
+              "G:\\AIT_Kanban_Home\\API\\RepoInterface\\RepoInterface.csproj": {
+                "projectPath": "G:\\AIT_Kanban_Home\\API\\RepoInterface\\RepoInterface.csproj"
               }
             }
           }

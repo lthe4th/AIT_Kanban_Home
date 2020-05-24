@@ -18,11 +18,6 @@ namespace Services
             this.repo = repo;
         }
 
-        public int CalculatedPercent(int Id)
-        {
-            return this.repo.CalculatedPercent(Id);
-        }
-
         public bool DeleteAllItem(DeleteAllItem model)
         {
             return this.repo.DeleteAllItem(model);

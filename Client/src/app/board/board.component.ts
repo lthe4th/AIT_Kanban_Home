@@ -15,6 +15,7 @@ export class BoardComponent implements OnInit {
 
   boards: Board[] = []
   CC = new CC();
+  origin = new Board();
   constructor(
     private board: BoardService,
     public diaglog: MatDialog
@@ -36,18 +37,38 @@ export class BoardComponent implements OnInit {
       return;
     }
     name.trim();
-    const newBoard = new Board();
-    newBoard.boardName = name;
-    this.board.NewBoard(newBoard).subscribe(NewBoard => this.boards.push(NewBoard));
+    this.origin = new Board();
+    this.origin.boardName = name;
+    this.board.NewBoard(this.origin).subscribe(NewBoard => this.boards.push(NewBoard));
     // this.board.NewBoard(newBoard);
+  }
+
+  ModBoard(name: string, id: number) {
+    this.origin = new Board();
+    this.origin.boardName = name;
+    this.origin.id = id
+
+    this.CC.Id = 2;
+    const dialogRef = this.diaglog.open(ConfirmDialogComponent, {
+      width: "500px",
+      height: "400px",
+      data: { board: this.origin, CC: this.CC, todo: null }
+    })
+    dialogRef.afterClosed().subscribe(modBoard =>this.boards.filter(board => {
+      if(board.id === modBoard.id){
+        board.boardName = modBoard.boardName;
+      }
+    }))
   }
 
   DeleteBoard(Id: number) {
     this.CC.Id = 1;
+    console.log(Id)
+    console.log(this.CC.Id);
     const dialogRef = this.diaglog.open(ConfirmDialogComponent, {
       width: "500px",
       height: "400px",
-      data: this.CC
+      data: { CC: this.CC, board: null, todo: null }
     })
     dialogRef.afterClosed().subscribe(result => {
       if (result) {

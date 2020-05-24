@@ -25,7 +25,7 @@ export class TodoService {
   }
 
   ModTodo(modtodo : Todo) : Observable<Todo>{
-    return this.http.put<Todo>(`${this.apiurl}/mod`,modtodo,httpOption);
+    return this.http.patch<Todo>(`${this.apiurl}/mod`,modtodo,httpOption);
   }
 
   deleteTodo(Id: number):Observable<boolean>{

@@ -1,9 +1,12 @@
 <div class="container-fluid">
     <div class="checklist">
-        <h4>{{Percent}}% Finished</h4>
-        <mat-progress-bar mode="determinate" [value]="Percent"></mat-progress-bar>
-        <mat-checkbox *ngFor="let item of checkList" [checked]="item.isfinished" (click)="UpdateStatus(item.id)">
-            {{item.itemName}}</mat-checkbox>
+        <div *ngIf="checkList.length >0">
+            <h4>{{percentOfFinished}}% Finished</h4>
+            <mat-progress-bar mode="determinate" [value]="percentOfFinished"></mat-progress-bar>
+            <mat-checkbox *ngFor="let item of checkList" [checked]="item.isfinished" (click)="UpdateStatus(item.itemName,item.id,item.isfinished)">
+                {{item.itemName}}</mat-checkbox>
+
+        </div>
     </div>
     <div class="NewItem">
         <mat-expansion-panel>

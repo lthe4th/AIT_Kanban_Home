@@ -9,7 +9,6 @@ namespace ServicesInterface
 {
     public interface IItemServices
     {
-        int CalculatedPercent(int Id);
         IEnumerable<Item> Items(int Id);
         Item NewItem(newitem model);
         Item ModItem(ModItem model);

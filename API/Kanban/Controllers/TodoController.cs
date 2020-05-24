@@ -30,7 +30,7 @@ namespace Kanban.Controllers
         {
             return this.ser.NewTodo(model);
         }
-        [HttpPut]
+        [HttpPatch]
         [Route("api/todos/mod")]
         public Todo ModTodo([FromBody] ModTodo model)
         {
