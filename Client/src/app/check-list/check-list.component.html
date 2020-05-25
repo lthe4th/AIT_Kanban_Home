@@ -3,7 +3,7 @@
         <div *ngIf="checkList.length >0">
             <h4>{{percentOfFinished}}% Finished</h4>
             <mat-progress-bar mode="determinate" [value]="percentOfFinished"></mat-progress-bar>
-            <mat-checkbox *ngFor="let item of checkList" [checked]="item.isfinished" (click)="UpdateStatus(item.itemName,item.id,item.isfinished)">
+            <mat-checkbox *ngFor="let item of checkList" [checked]="item.isfinished" (click)="UpdateStatus(item)">
                 {{item.itemName}}</mat-checkbox>
 
         </div>
@@ -18,9 +18,9 @@
             <div class="InputForm">
                 <mat-form-field>
                     <mat-label>First name</mat-label>
-                    <input matInput #NewItemName>
+                    <input matInput #NewItemName (keydown.enter)="NewItem(todoId,NewItemName.value);NewItemName.valu=''">
                 </mat-form-field>
-                <button class="btn" (click)="NewItem(todoId,NewItemName.value)">
+                <button class="btn" (click)="NewItem(todoId,NewItemName.value);NewItemName.value=''">
                     <mat-icon>add</mat-icon>
                 </button>
             </div>

@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div>
         <mat-form-field>
-            <input matInput type="text" value="{{data.todoName}}"  #newTodoName>
+            <input matInput type="text" value="{{data.todoName}}"  #newTodoName (keydown.enter)="changeTodoName(newTodoName.value);newTodoName.value=''">
             <button mat-button matSuffix mat-icon-button (click)="changeTodoName(newTodoName.value)">
                 <mat-icon>save</mat-icon>
             </button>

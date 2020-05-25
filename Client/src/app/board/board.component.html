@@ -26,9 +26,9 @@
                         <div class="inputfield">
                             <mat-form-field>
                                 <mat-label>Name</mat-label>
-                                <input matInput #newboardname>
+                                <input matInput #newboardname (keydown.enter)="NewBoard(newboardname.value);newboardname.value=''">
                             </mat-form-field>
-                            <button class="btn btn-success" (click)="NewBoard(newboardname.value)">
+                            <button class="btn btn-success" (click)="NewBoard(newboardname.value);newboardname.value=''">
                                 <mat-icon>add</mat-icon>
                             </button>
                         </div>

@@ -33,7 +33,7 @@ export class CheckListComponent implements OnInit {
         count = count + 1;
       }
     });
-    this.percentOfFinished = count / this.checkList.length * 100
+    this.percentOfFinished = Math.ceil(count / this.checkList.length * 100)
 
     // this.percentOfFinished = this.numberOfItemFinished/this.numberofitem*100
   }
@@ -54,20 +54,16 @@ export class CheckListComponent implements OnInit {
 
 
 
-  UpdateStatus(name: string, id: number, status: boolean) {
-    const item2 = new Item();
-    item2.id = id;
-    item2.itemName = name;
-    item2.isfinished = status;
+  UpdateStatus(item: Item) {
+
+    var item2 = new Item();
+    item2 = item;
+    item2.isfinished = !item.isfinished
     // console.log(`${JSON.stringify(item2)}`)
-    this.item.ModItem(item2).subscribe(result => this.checkList.filter(each => {
-      if (each.id === item2.id) {
-        each.isfinished = !each.isfinished;
-        this.CalculatePercent();
+    this.item.ModItem(item2).subscribe(result => {
+      if (result) {
+        this.Items(this.todoId);
       }
-    }))
-
+    })
   }
-
-
 }

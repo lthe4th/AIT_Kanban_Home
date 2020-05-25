@@ -1,3 +1,4 @@
+using System.Net.Mime;
 using System.Collections.Immutable;
 using System;
 using System.Collections.Generic;
@@ -53,8 +54,9 @@ namespace Kanban
                 Builder.AllowAnyMethod();
                 Builder.AllowAnyOrigin();
             });
-            app.UseHttpsRedirection();
+            app.UseStaticFiles();
 
+            app.UseHttpsRedirection();
             app.UseRouting();
 
             app.UseAuthorization();
