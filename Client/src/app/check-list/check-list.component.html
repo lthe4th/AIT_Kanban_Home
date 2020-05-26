@@ -9,21 +9,14 @@
         </div>
     </div>
     <div class="NewItem">
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Add Another Check Item
-                </mat-panel-title>
-            </mat-expansion-panel-header>
             <div class="InputForm">
                 <mat-form-field>
-                    <mat-label>First name</mat-label>
-                    <input matInput #NewItemName (keydown.enter)="NewItem(todoId,NewItemName.value);NewItemName.valu=''">
+                    <mat-label>Add Item</mat-label>
+                    <input matInput #NewItemName (keydown.enter)="NewItem(todoId,NewItemName.value);NewItemName.value=''">
                 </mat-form-field>
-                <button class="btn" (click)="NewItem(todoId,NewItemName.value);NewItemName.value=''">
+                <button mat-flat-button mat-icon-button color="primary" (click)="NewItem(todoId,NewItemName.value);NewItemName.value=''">
                     <mat-icon>add</mat-icon>
                 </button>
             </div>
-        </mat-expansion-panel>
     </div>
 </div>

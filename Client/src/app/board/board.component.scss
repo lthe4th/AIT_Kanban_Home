@@ -9,3 +9,78 @@ mat-sidenav-container{
 .newboard{
     height: max-content;
 }
+
+
+@media only screen and (max-width: 600px) {
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+mat-sidenav-container{
+    height: 100% !important;
+    padding: 0;
+}
+mat-sidenav{
+    padding: 0;
+    text-align: center;
+    width: 300px;;
+    padding: 1rem;
+    .sidenav-heading{
+        height: 30%;
+        img{
+            width: 200px;
+        }
+        h2{
+            font-size: 20px;
+        }
+        
+    }
+    .sidenav-body{
+        height: 65%;
+        overflow: hidden;
+        .newboard_mobile_sidebar{
+            margin-top: 2rem;
+        }
+        .mobile_board_button{
+            text-align: center;
+            width: 100%;
+            button{
+                display: block;
+                width: 100%;
+
+            }
+        }
+    }
+    .sidenav-footer{
+        height: 5%;
+    }
+}
+mat-sidenav-content{
+    overflow-x: hidden;
+    background: white;
+    .on_desktop{
+        display: none;
+    }
+    mat-card{
+        padding: 0;
+        overflow-x: hidden;
+    }
+    .new_when_nothing{
+        padding: 0 1rem;
+        h5{
+            margin-top: 10px;
+        }
+        button{
+            line-height: 5px;
+            margin-left: 1rem;
+            padding: 0 5px;
+        }
+    }
+
+}
+
+
+}

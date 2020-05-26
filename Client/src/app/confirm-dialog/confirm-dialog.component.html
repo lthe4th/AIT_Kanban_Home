@@ -1,15 +1,7 @@
-<div class="DeleteConfirm" *ngIf="data.CC.Id===1">
-    <img src="" alt="">
-    <button class="btn" [mat-dialog-close]="result">
-        <mat-icon>check</mat-icon>
-    </button>
-    <button class="btn" [mat-dialog-close]>
-        <mat-icon>close</mat-icon>
-    </button>
-</div>
-<div class="EditBoardName" *ngIf="data.CC.Id===2">
+
+<div class="EditBoardName">
     <mat-form-field>
-        <input matInput placeholder="New Name" value="{{data.board.boardName}}" #NewBoardName (keydown.enter)="ModName(NewBoardName.value);NewBoardName.valu=''">
+        <input matInput placeholder="New Name" value="{{data.name}}" #NewBoardName (keydown.enter)="ModName(NewBoardName.value);NewBoardName.valu=''">
         <button mat-button mat-icon-button matSuffix (click)="ModName(NewBoardName.value);NewBoardName.value=''" >
             <mat-icon>save</mat-icon>
         </button>

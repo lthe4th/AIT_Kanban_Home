@@ -1,10 +1,33 @@
-<mat-card-content>
-    <div *ngIf="todos">
-        <div class="Todos" *ngFor="let todo of todos">
-            <button mat-raised-button (click)="OpenDetail(todo)">{{todo.todoName}}</button>
+<div *ngIf="todos">
+    <mat-card-actions>
+        <app-new-todo (NewTodoEvent)="ReceivedNewTodo($event)" [BoardId]="this.Id"></app-new-todo>
+    </mat-card-actions>
+    <div class="on_mobile">
+        <div class="Todos " *ngFor="let todo of todos">
+            <button mat-raised-button (click)="OpenDetail(todo)" [color]="getTodoColor(todo.prio)"
+                class="Todo">{{todo.todoName}}</button>
+            <button mat-flat-button [matMenuTriggerFor]="todoMenu" [matMenuTriggerData]="{id:todo.id}">
+                <mat-icon>more_horiz</mat-icon>
+            </button>
         </div>
     </div>
-</mat-card-content>
-<mat-card-actions>
-    <app-new-todo (NewTodoEvent)="ReceivedNewTodo($event)" [BoardId]="this.Id"></app-new-todo>
-</mat-card-actions>
+    <div class="on_Desktop" cdkDropList [cdkDropListData]="todos" (cdkDropListDropped)="drop($event)"
+        #list="cdkDropList" [cdkDropListConnectedTo]="list">
+        <div class="Todos " *ngFor="let todo of todos" cdkDrag>
+            <button mat-raised-button (click)="OpenDetail(todo)"
+                [color]="getTodoColor(todo.prio)">{{todo.todoName}}</button>
+            <button mat-flat-button [matMenuTriggerFor]="todoMenu" [matMenuTriggerData]="{id:todo.id}">
+                <mat-icon>more_horiz</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<mat-menu #todoMenu="matMenu">
+    <ng-template matMenuContent let-id="id">
+        <button mat-menu-item (click)="changeColor(1,id)">Imediately</button>
+        <button mat-menu-item (click)="changeColor(2,id)">Importance</button>
+        <button mat-menu-item (click)="deleteTodo(id)">Delete</button>
+    </ng-template>
+</mat-menu>

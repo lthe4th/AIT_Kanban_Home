@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TodoService } from '../Services/todo.service';
 import { Todo } from '../Models/Todo';
-
+import swal from 'sweetalert2'
 @Component({
   selector: 'app-new-todo',
   templateUrl: './new-todo.component.html',
@@ -18,6 +18,9 @@ export class NewTodoComponent implements OnInit {
 
   newTodo(name: string, boardId: number) {
     if (name === "") {
+      swal.fire(
+        { title: "THAT cant\' be empty", text: "type again ?", icon: "warning", heightAuto: false }
+      );
       return;
     }
     const newTodo = new Todo();

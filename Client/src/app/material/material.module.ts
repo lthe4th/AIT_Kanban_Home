@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule, MatDialogModule, MatSidenavModule, MatIconModule, MatExpansionModule, MatFormFieldModule, MatInputModule, MatRippleModule, MatMenuModule, MatRipple, MatCheckboxModule, MatProgressBarModule, MatCardModule} from "@angular/material"
-
+import { MatButtonModule, MatDialogModule, MatSidenavModule, MatIconModule, MatExpansionModule, MatFormFieldModule, MatInputModule, MatRippleModule, MatMenuModule, MatRipple, MatCheckboxModule, MatProgressBarModule, MatCardModule, MatTabsModule} from "@angular/material"
+import { DragDropModule } from '@angular/cdk/drag-drop'
 const MaterialComponent = [
   MatButtonModule,
   MatDialogModule,
@@ -13,7 +13,9 @@ const MaterialComponent = [
   MatRippleModule,
   MatCheckboxModule,
   MatProgressBarModule,
-  MatCardModule
+  MatCardModule,
+  DragDropModule,
+  MatTabsModule
 ]
 
 

@@ -1,16 +1,9 @@
 <div class="container-fluid">
-    <div>
-        <mat-form-field>
-            <input matInput type="text" value="{{data.todoName}}"  #newTodoName (keydown.enter)="changeTodoName(newTodoName.value);newTodoName.value=''">
-            <button mat-button matSuffix mat-icon-button (click)="changeTodoName(newTodoName.value)">
-                <mat-icon>save</mat-icon>
-            </button>
-        </mat-form-field>
+    <div class="Heading">
+        <h5>{{data.todoName}}</h5>
     </div>
-    <div mat-dialog-content class="container">
-        <app-check-list [todoId]="data.id"></app-check-list>
-    </div>
+    <app-check-list [todoId]="data.id"></app-check-list>
     <div mat-dialog-actions>
-        <button mat-raised-button color="warn" (click)="deleteThisTask()">Delete this Task</button>
-      </div>
+        <button mat-raised-button color="accent" class="deletebtn" (click)="deleteThisTask()">Delete this Task</button>
+    </div>
 </div>

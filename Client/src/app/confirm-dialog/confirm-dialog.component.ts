@@ -4,12 +4,9 @@ import { CC } from '../Models/ConfirmFormCase';
 import { Board } from '../Models/Board';
 import { BoardService } from '../Services/board.service';
 import { Todo } from '../Models/Todo';
+import swal from 'sweetalert2'
 
-export interface data {
-  CC : CC
-  board : Board
-  todo : Todo
-}
+
 
 @Component({
   selector: 'app-confirm-dialog',
@@ -21,25 +18,27 @@ export class ConfirmDialogComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<ConfirmDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data,
-    private board  : BoardService
+    private board: BoardService
   ) { }
 
   ngOnInit() {
   }
 
-  result = true;
-  boardWithNewnName : Board;
+  modedBoard: Board;
 
 
-  ModName(name : string){
-    if(name === this.data.board.boardName || name === ""){
+  ModName(name: string) {
+    if (name === "") {
+      swal.fire({
+        title: "THAT cant\' be empty", icon: "warning", heightAuto: false
+      });
       return;
     }
     var newboard = new Board();
     newboard.boardName = name;
-    newboard.id = this.data.board.id;
+    newboard.id = this.data.id;
     this.board.ModBoard(newboard).subscribe(modedBoard => {
-    this.dialogRef.close(modedBoard);
+      this.dialogRef.close(modedBoard);
     });
 
   }

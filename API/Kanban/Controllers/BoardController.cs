@@ -42,7 +42,7 @@ namespace Kanban.Controllers
         }
 
         [HttpDelete]
-        [Route("api/boards/clear")]
+        [Route("api/boards/delete/clear/everything")]
         public bool ClearAll(){
             return this.ser.ClearAll();
         }

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ItemService } from '../Services/item.service';
 import { Item } from '../Models/Item';
-
+import swal from 'sweetalert2'
 @Component({
   selector: 'app-check-list',
   templateUrl: './check-list.component.html',
@@ -41,6 +41,9 @@ export class CheckListComponent implements OnInit {
 
   NewItem(Id: number, name: string) {
     if (name === "") {
+      swal.fire(
+        { title: "THAT cant\' be empty", text: "type again ?", icon: "warning", heightAuto: false }
+      );
       return;
     }
     const newItem = new Item();

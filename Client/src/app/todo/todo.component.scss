@@ -1,0 +1,21 @@
+@media only screen and (max-width: 600px) {
+    .on_Desktop{
+        display: none;
+    }
+    mat-card-actions{
+        margin: 1rem;
+    }
+    .on_mobile{
+        overflow-x: hidden;
+        .Todos{
+            width: 100%;
+            padding: 10px 15px;
+            .Todo{
+                width: 80%;
+                white-space: normal;
+                text-align: left;
+            }
+        }
+
+    }
+}

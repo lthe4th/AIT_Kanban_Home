@@ -28,11 +28,14 @@ export class BoardService {
   ModBoard(modboard: Board): Observable<Board> {
     return this.http.put<Board>(`${this.apiurl}/mod`, modboard, httpOptions);
   }
-  
+
   DeleteBoard(Id: number): Observable<boolean> {
     return this.http.delete<boolean>(`${this.apiurl}/delete/${Id}`)
   }
 
+  DeleteEverything(): Observable<boolean> {
+    return this.http.delete<boolean>(`${this.apiurl}/delete/clear/everything`)
+  }
   // NewBoard(newBoard: Board){
   //   console.log(newBoard.boardName);
   // }

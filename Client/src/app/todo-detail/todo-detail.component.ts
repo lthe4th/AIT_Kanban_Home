@@ -6,7 +6,7 @@ import { Item } from '../Models/Item';
 import { TodoService } from '../Services/todo.service';
 import { CC } from '../Models/ConfirmFormCase';
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
-
+import swal from 'sweetalert2'
 
 @Component({
   selector: 'app-todo-detail',
@@ -27,23 +27,38 @@ export class TodoDetailComponent implements OnInit {
   }
 
   deleteThisTask() {
-    this.CC.Id = 1;
-    const DialogRef = this.dialog.open(ConfirmDialogComponent, {
-      width: "400px",
-      height: "300px",
-      data: { CC: this.CC, board: null, todo: this.data }
-    })
-    DialogRef.afterClosed().subscribe(result => {
-      if (result) {
+    swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
+      heightAuto: false
+    }).then((result) => {
+      if (result.value) {
         this.todo.deleteTodo(this.data.id).subscribe(result => {
           this.diaglogRef.close(this.data.id)
+          if (result) {
+            swal.fire({
+              title: 'Deleted!',
+              text: 'Your file has been deleted.',
+              icon: 'success',
+              heightAuto: false
+            })
+          }
         })
       }
+
     })
   }
 
   changeTodoName(name: string) {
-    if(name === ""){
+    if (name === "") {
+      swal.fire(
+        { title: "THAT cant\' be empty", text: "type again ?", icon: "warning", heightAuto: false }
+      );
       return;
     }
     var modTodo = new Todo();
