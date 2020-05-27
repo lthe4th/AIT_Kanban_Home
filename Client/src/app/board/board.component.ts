@@ -4,6 +4,8 @@ import { BoardService } from '../Services/board.service';
 import { MatDialog } from '@angular/material/dialog'
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 import swal from 'sweetalert2'
+import { Todo } from '../Models/Todo';
+
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
@@ -13,6 +15,8 @@ export class BoardComponent implements OnInit {
 
   boards: Board[] = []
   show_mobile_greeting_new_input_filed: true
+  RaiseFlag: Todo;
+  BoardUpdated: boolean;
   constructor(
     private board: BoardService,
     public diaglog: MatDialog,
@@ -25,8 +29,13 @@ export class BoardComponent implements OnInit {
   Boards(): void {
     this.board.Boards().subscribe(data => {
       this.boards = data;
+      this.RaiseFlag = new Todo();
     });
+  }
 
+
+  RaiseEvent(event) {
+    this.RaiseFlag = event
   }
 
 
@@ -46,21 +55,40 @@ export class BoardComponent implements OnInit {
   }
 
   ModBoard(name: string, id: number) {
-    const dialogRef = this.diaglog.open(ConfirmDialogComponent, {
-      width: "500px",
-      height: "200px",
-      data: {name: name, id : id}
-    })
-    dialogRef.afterClosed().subscribe(modBoard => {
-      if (!modBoard) {
-        return;
-      }
-      this.boards.filter(board => {
-        if (board.id === modBoard.id) {
-          board.boardName = modBoard.boardName;
+    swal.fire({
+      title: 'Enter New name',
+      input: 'text',
+      inputValue: name,
+      showCancelButton: true,
+      heightAuto: false,
+      inputValidator: (value) => {
+        if (!value) {
+          return 'You need to write something!'
         }
-      })
+        this.boards.filter(each => {
+          if (each.id === id) {
+            each.boardName = value;
+            this.board.ModBoard(each).subscribe();
+          }
+        })
+
+      }
     })
+    // const dialogRef = this.diaglog.open(ConfirmDialogComponent, {
+    //   width: "300px",
+    //   height: "100px",
+    //   data: { name: name, id: id }
+    // })
+    // dialogRef.afterClosed().subscribe(modBoard => {
+    //   if (!modBoard) {
+    //     return;
+    //   }
+    //   this.boards.filter(board => {
+    //     if (board.id === modBoard.id) {
+    //       board.boardName = modBoard.boardName;
+    //     }
+    //   })
+    // })
   }
 
   DeleteBoard(Id: number) {

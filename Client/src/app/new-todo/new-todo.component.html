@@ -1,17 +1,10 @@
 
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        New Task
-      </mat-panel-title>
-    </mat-expansion-panel-header>
-    <div>
+    <div class="content">
       <mat-form-field>
-        <mat-label>Task Name</mat-label>
-        <input matInput #newTodoInput (keydown.enter)="newTodo(newTodoInput.value,this.BoardId);newTodoInput.value=''">
+        <mat-label style="color: white;">New Task</mat-label>
+        <input matInput #newTodoInput (keydown.enter)="newTodo(newTodoInput.value,this.BoardId);newTodoInput.value=''" style="color: white;">
       </mat-form-field>
       <button class="btn btn-success" (click)="newTodo(newTodoInput.value,this.BoardId);newTodoInput.value=''">
         <mat-icon>add</mat-icon>
       </button>
     </div>
-  </mat-expansion-panel>

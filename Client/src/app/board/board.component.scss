@@ -4,14 +4,35 @@
 
 mat-sidenav-container{
     height: 100%;
+    background: linear-gradient(rgba($color:#000,$alpha:0.4),rgba($color:#000,$alpha:0.4)),url(../../assets/background.jpg);
+    background-size: cover;
+    mat-sidenav-content{
+        header{
+            background-color: transparent;
+        }
+        body{
+            background-color: transparent;
+        }
+    }
 }
+
 
 .newboard{
     height: max-content;
 }
-
+.dtpr{
+    background-color: rgba($color: #Fff, $alpha: 0.05);
+}
+.tpr{
+    background: rgba($color: #fff, $alpha: 0.05);
+}
+.rtpr{
+    background: transparent;
+    color: white;
+}
 
 @media only screen and (max-width: 600px) {
+
 *{
     padding: 0;
     margin: 0;
@@ -57,10 +78,14 @@ mat-sidenav{
     .sidenav-footer{
         height: 5%;
     }
+
 }
 mat-sidenav-content{
     overflow-x: hidden;
-    background: white;
+    background-color: rgba($color: #fff, $alpha: 0.06);
+    body{
+        padding: 15px;
+    }
     .on_desktop{
         display: none;
     }
@@ -79,8 +104,59 @@ mat-sidenav-content{
             padding: 0 5px;
         }
     }
-
 }
+}
+@media only screen and (min-width:600px){
+    .on_mobile{
+        display:none;
+    }
+    mat-sidenav{
+        width: 25%;
+        text-align: center;
+        .sidenav-heading{
+            img{
+                width: 300px;
+            }
+        }
+        .sidenav-body{
+            height: 50%;
+            .newboard_mobile_sidebar{
+                display: none;
+            }
+        }
 
+    }
+    mat-sidenav-content{
+        drag-scroll{
+            height: 100%;
+            width: 100%;
+        }
+        overflow: hidden;
+        cursor: grab;
+        padding: 1rem;
+        .Board{
+            display: inline-block;
+            margin: 1rem 0 0 1rem;
+            height: max-content;
+            min-width: 18rem;
+            max-width: 18rem;
+            mat-card-title{
+                color: rgba($color: #fff, $alpha: 0.7);
+            }
+        }
+        .newboard{
+            min-width: 17rem;
+            margin: 1rem 0 0 1rem ;
+            padding: 1rem;
+            box-shadow: none;
+            border-radius: .3rem;
+            background-color: rgba($color: #fff, $alpha: 0.05);
+            mat-panel-title{
+                color: white;
+            }
+            
+
+        }
+    }
 
 }

@@ -26,6 +26,8 @@ export class TodoDetailComponent implements OnInit {
 
   }
 
+
+
   deleteThisTask() {
     swal.fire({
       title: 'Are you sure?',
@@ -54,24 +56,40 @@ export class TodoDetailComponent implements OnInit {
     })
   }
 
-  changeTodoName(name: string) {
-    if (name === "") {
-      swal.fire(
-        { title: "THAT cant\' be empty", text: "type again ?", icon: "warning", heightAuto: false }
-      );
-      return;
-    }
-    var modTodo = new Todo();
-    modTodo.id = this.data.id;
-    modTodo.todoName = name;
-    modTodo.prio = this.data.prio;
-    modTodo.deadline = this.data.deadline;
-    modTodo.deadLineStatus = this.data.deadLineStatus;
-    modTodo.boardId = this.data.boardId;
-    this.todo.ModTodo(modTodo).subscribe(data => {
-      this.diaglogRef.close(data);
+  changeName() {
+    // swal.fire({
+    //   text:"New Name ?",
+    //   input: 'text',
+    //   confirmButtonText: 'save',
+    //   showCancelButton: true,
+    // }).then((result) => {
+    //   if(result.value === ""){
+    //     swal.fire({
+    //       text:"that can't be empty dude",
+    //       icon :"error",
+    //       confirmButtonText:"Ok"
+    //     })
+    //   }
+  
+    // })
+    swal.fire({
+      title: 'Enter New name',
+      input: 'text',
+      inputValue: name,
+      showCancelButton: true,
+      heightAuto: false,
+      inputValidator: (value) => {
+        if (!value) {
+          return 'You need to write something!'
+        }
+        value = value.trim();
+        var modNameTodo = new Todo();
+        modNameTodo = this.data;
+        modNameTodo.todoName = value;
+        this.todo.ModTodo(modNameTodo).subscribe(data => this.data = data);
+        
+      }
     })
   }
-
 
 }

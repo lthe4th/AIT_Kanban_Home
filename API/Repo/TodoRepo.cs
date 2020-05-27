@@ -33,8 +33,6 @@ namespace Repo
             p.Add("@Id",model.Id);
             p.Add("@name",model.TodoName);
             p.Add("@prio",model.Prio);
-            p.Add("@deadline",model.Deadline);
-            p.Add("@deadlinestatus",model.DeadlineStatus);
             p.Add("@boardid",model.BoardId);
 
             Todo modedtodo = SqlMapper.Query<Todo>(con,"modtodo", param:p, commandType:CommandType.StoredProcedure).First();

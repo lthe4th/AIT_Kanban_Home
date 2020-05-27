@@ -1,10 +1,12 @@
 import { Todo } from './../Models/Todo';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, SimpleChange, OnChanges } from '@angular/core';
 import { TodoService } from '../Services/todo.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { TodoDetailComponent } from '../todo-detail/todo-detail.component';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import swal from 'sweetalert2'
+import { BoardService } from '../Services/board.service';
+import { Board } from '../Models/Board';
 
 @Component({
   selector: 'app-todo',
@@ -14,23 +16,68 @@ import swal from 'sweetalert2'
 export class TodoComponent implements OnInit {
 
   @Input() Id: number
+  private _afterRaise: Todo
+  @Input() boards : Board[];
+  @Input() set afterRaise(value: Todo) {
+    this.updateAfterMoving(value);
+  }
+  @Output() RaiseEvent = new EventEmitter()
   constructor(private todo: TodoService, public dialog: MatDialog) { }
-
+  localBoards : Board[] = [];
   todos: Todo[] = []
-
   ngOnInit() {
     this.Todos(this.Id);
+    // this.localBoards = this.boards;
+    this.localBoards = this.boards.filter(each => each.id !== this.Id);
   }
 
+  compare(a:Todo,b:Todo){
+    if(a.prio<b.prio){
+      return 1
+    }
+    if(a.prio>b.prio){
+      return -1
+    }
+  }
+
+  updateAfterMoving(todo: Todo) {
+    if (this.Id === todo.boardId) {
+      this.todos.push(todo);
+    }
+  }
+
+  UpdatePosition(id: number, board: Board) {
+    var movingTodo = new Todo();
+    this.todos.forEach(item => {
+      if (item.id === id) {
+        movingTodo = item;
+      }
+    });
+    movingTodo.boardId = board.id
+    this.todo.ModTodo(movingTodo).subscribe(newMoving => {
+      this.todos = this.todos.filter(each => each.id !== id);
+      this.RaiseEvent.emit(newMoving);
+    });
+  }
+
+
   Todos(Id: number) {
-    this.todo.Todos(Id).subscribe(data => this.todos = data);
+    this.todo.Todos(Id).subscribe(data => {
+      data.sort(this.compare);
+      this.todos = data
+    });
+  }
+
+  RaiseUpdate() {
+    var result = false
+    this.RaiseEvent.emit(result);
   }
 
   OpenDetail(toSend: Todo) {
     const dialogRef = this.dialog.open(TodoDetailComponent, {
       data: toSend,
-      width: "80vw",
-      height: "80vh"
+      autoFocus: false,
+      
     })
     dialogRef.afterClosed().subscribe(data => {
       if (typeof (data) === "number") {
@@ -66,10 +113,10 @@ export class TodoComponent implements OnInit {
           this.todos = this.todos.filter(each => each.id !== Id)
           if (result) {
             swal.fire({
-              title:'Deleted!',
-              text:'Your file has been deleted.',
-              icon:'success',
-              heightAuto:false
+              title: 'Deleted!',
+              text: 'Your file has been deleted.',
+              icon: 'success',
+              heightAuto: false
             })
           }
         })
@@ -104,10 +151,10 @@ export class TodoComponent implements OnInit {
   getTodoColor(prio: number) {
     var color: string;
     if (prio === 1) {
-      color = "warn"
+      color = "primary"
     }
     if (prio === 2) {
-      color = "primary"
+      color = "warn"
     }
     return color;
   }
