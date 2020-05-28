@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable, of } from 'rxjs'
 import { tap, catchError } from 'rxjs/operators'
 import { Board } from '../Models/Board'
+import { apiurl } from '../Models/apiurl';
 
 
 const httpOptions = {
@@ -14,7 +15,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class BoardService {
-  apiurl = "https://localhost:5001/api/boards";
+  apiurl = `${apiurl.URL}/boards`
   constructor(private http: HttpClient) { }
 
   Boards(): Observable<Board[]> {

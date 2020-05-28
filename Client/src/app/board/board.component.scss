@@ -21,10 +21,10 @@ mat-sidenav-container{
     height: max-content;
 }
 .dtpr{
-    background-color: rgba($color: #Fff, $alpha: 0.05);
+    background-color: rgba($color: #Fff, $alpha: 0.2);
 }
 .tpr{
-    background: rgba($color: #fff, $alpha: 0.05);
+    background: rgba($color: #fff, $alpha: 0.2);
 }
 .rtpr{
     background: transparent;
@@ -32,7 +32,12 @@ mat-sidenav-container{
 }
 
 @media only screen and (max-width: 600px) {
-
+.ReportExport{
+    width: 80%;
+    button{
+        white-space: normal;
+    }
+}
 *{
     padding: 0;
     margin: 0;
@@ -150,7 +155,7 @@ mat-sidenav-content{
             padding: 1rem;
             box-shadow: none;
             border-radius: .3rem;
-            background-color: rgba($color: #fff, $alpha: 0.05);
+            background-color: rgba($color: #fff, $alpha: 0.2);
             mat-panel-title{
                 color: white;
             }

@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable, of } from 'rxjs'
 import { tap, catchError } from 'rxjs/operators'
 import { Todo } from '../Models/Todo'
+import { apiurl } from '../Models/apiurl';
 
 const httpOption = {
   headers: new HttpHeaders({ 'content-type': 'application/JSON' })
@@ -13,7 +14,8 @@ const httpOption = {
   providedIn: 'root'
 })
 export class TodoService {
-  apiurl = "https://localhost:5001/api/todos";
+  // apiurl = "https://localhost:5001/api/todos";
+  apiurl = `${apiurl.URL}/todos`
   constructor(private http: HttpClient) { }
 
   Todos(Id: number): Observable<Todo[]> {

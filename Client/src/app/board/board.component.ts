@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog'
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 import swal from 'sweetalert2'
 import { Todo } from '../Models/Todo';
+import { ReportService } from '../Services/report.service';
 
 @Component({
   selector: 'app-board',
@@ -19,12 +20,32 @@ export class BoardComponent implements OnInit {
   BoardUpdated: boolean;
   constructor(
     private board: BoardService,
+    private report: ReportService,
     public diaglog: MatDialog,
   ) { }
 
   ngOnInit() {
     this.Boards();
   }
+
+  getDownloadLink() {
+    this.report.getReportDownloadLink().subscribe(data => {
+      swal.fire({
+        title: 'Succes',
+        text: "Do you want to download it now ?",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yeah sure'
+      }).then((result) => {
+        if (result.value) {
+          window.open(data)
+        }
+      })
+    })
+  }
+
 
   Boards(): void {
     this.board.Boards().subscribe(data => {

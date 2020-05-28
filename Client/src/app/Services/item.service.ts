@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable, of } from 'rxjs'
 import { tap, catchError } from 'rxjs/operators'
 import { Item } from '../Models/Item'
+import { apiurl } from '../Models/apiurl';
 
 const httpOption = {
   headers: new HttpHeaders({ 'content-type': 'application/JSON' })
@@ -13,7 +14,8 @@ const httpOption = {
   providedIn: 'root'
 })
 export class ItemService {
-  apiurl = "https://localhost:5001/api/items";
+  // apiurl = "https://localhost:5001/api/items";
+  apiurl = `${apiurl.URL}.items`
   constructor(private http: HttpClient) { }
 
   GetItems(Id: number): Observable<Item[]> {

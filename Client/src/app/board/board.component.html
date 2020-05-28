@@ -18,7 +18,10 @@
                     </button>
                 </div>
             </div>
-            <button mat-flat-button color="warn" (click)="DeleteEveryThing();sidenav.close()">Delete Everything</button>
+            <div class="ReportExport" style="margin: 2rem;">
+                <button mat-raised-button color="primary" style="height: 4rem;" (click)="getDownloadLink()"><mat-icon>get_app</mat-icon><span>Generate an excel file for this Section</span></button>
+            </div> 
+            <button mat-flat-button color="warn" (click)="DeleteEveryThing();sidenav.close()" style="height: 4rem;">Delete Everything</button>
 
         </div>
         <div class="sidenav-footer">
