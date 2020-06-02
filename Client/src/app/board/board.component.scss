@@ -1,7 +1,6 @@
 *{
     padding: 0;
 }
-
 mat-sidenav-container{
     height: 100%;
     background: linear-gradient(rgba($color:#000,$alpha:0.4),rgba($color:#000,$alpha:0.4)),url(../../assets/background.jpg);
@@ -21,10 +20,10 @@ mat-sidenav-container{
     height: max-content;
 }
 .dtpr{
-    background-color: rgba($color: #Fff, $alpha: 0.2);
+    background-color: rgba($color: #000, $alpha: 0.3);
 }
 .tpr{
-    background: rgba($color: #fff, $alpha: 0.2);
+    background: rgba($color: #000, $alpha: 0.3);
 }
 .rtpr{
     background: transparent;
@@ -54,6 +53,7 @@ mat-sidenav{
     text-align: center;
     width: 300px;;
     padding: 1rem;
+    
     .sidenav-heading{
         height: 30%;
         img{
@@ -155,7 +155,7 @@ mat-sidenav-content{
             padding: 1rem;
             box-shadow: none;
             border-radius: .3rem;
-            background-color: rgba($color: #fff, $alpha: 0.2);
+            background-color: rgba($color: #000, $alpha: 0.2);
             mat-panel-title{
                 color: white;
             }

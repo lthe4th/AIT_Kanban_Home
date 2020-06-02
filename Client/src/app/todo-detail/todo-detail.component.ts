@@ -45,9 +45,11 @@ export class TodoDetailComponent implements OnInit {
           if (result) {
             swal.fire({
               title: 'Deleted!',
-              text: 'Your file has been deleted.',
               icon: 'success',
-              heightAuto: false
+              heightAuto: false,
+              timer: 1000,
+              showConfirmButton:false
+
             })
           }
         })

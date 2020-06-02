@@ -2,9 +2,13 @@
     <div class="on_mobile" style="overflow: scroll; padding: .5rem;">
         <app-new-todo (NewTodoEvent)="ReceivedNewTodo($event)" [BoardId]="this.Id"></app-new-todo>
         <div class="Todos " *ngFor="let todo of todos">
-            <button mat-raised-button (click)="OpenDetail(todo)" [color]="getTodoColor(todo.prio)"
+            <i class="warningicon">
+                <mat-icon *ngIf="todo.prio===2">error</mat-icon>
+            </i>
+            <button mat-raised-button [class.greenbackground]="todo.prio===1" (click)="OpenDetail(todo)" [color]="getTodoColor(todo.prio)"
                 class="Todo">{{todo.todoName}}</button>
-            <button mat-flat-button [matMenuTriggerFor]="todoMenu" [matMenuTriggerData]="{id:todo.id}" style="background-color: transparent;color: white;">
+            <button mat-flat-button [matMenuTriggerFor]="todoMenu" [matMenuTriggerData]="{id:todo.id}"
+                style="background-color: transparent;color: white;">
                 <mat-icon>more_horiz</mat-icon>
             </button>
         </div>
@@ -12,10 +16,14 @@
     <div class="on_Desktop">
         <div cdkDropList [cdkDropListData]="todos" (cdkDropListDropped)="drop($event)" #list="cdkDropList"
             [cdkDropListConnectedTo]="list" class="droplist">
-            <div class="Todos " *ngFor="let todo of todos" cdkDrag>
+            <div class="Todos " *ngFor="let todo of todos" cdkDrag >
+                <i class="warningicon">
+                    <mat-icon *ngIf="todo.prio===2">error</mat-icon>
+                </i>
                 <button mat-raised-button (click)="OpenDetail(todo)" [color]="getTodoColor(todo.prio)"
-                    class="Todo-btn">{{todo.todoName}}</button>
-                <button mat-flat-button [matMenuTriggerFor]="todoMenu" [matMenuTriggerData]="{id:todo.id}" style="background-color: transparent;color: white;">
+                    class="Todo-btn" [class.greenbackground]="todo.prio===1">{{todo.todoName}}</button>
+                <button mat-flat-button [matMenuTriggerFor]="todoMenu" [matMenuTriggerData]="{id:todo.id}"
+                    style="background-color: transparent;color: white;">
                     <mat-icon style="height: 100%;">more_horiz</mat-icon>
                 </button>
             </div>

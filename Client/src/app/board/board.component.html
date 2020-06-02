@@ -29,7 +29,7 @@
         </div>
     </mat-sidenav>
     <mat-sidenav #Memo="matSidenav" position="end" mode="push">
-        <app-memos></app-memos>
+        <app-memos [Deleted]="EverythingIsDeleted"></app-memos>
     </mat-sidenav>
     <mat-sidenav-content>
         <header>

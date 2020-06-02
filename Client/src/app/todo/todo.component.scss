@@ -50,3 +50,19 @@
 
     }
 }
+
+.Todos{
+    position: relative;
+    .warningicon{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transform: translate(-10px,-10px);
+        color: white;
+    }
+}
+
+.greenbackground{
+    background-color: rgb(36, 184, 36);
+}

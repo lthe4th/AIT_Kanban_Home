@@ -18,6 +18,7 @@ export class BoardComponent implements OnInit {
   show_mobile_greeting_new_input_filed: true
   RaiseFlag: Todo;
   BoardUpdated: boolean;
+  EverythingIsDeleted  = false;
   constructor(
     private board: BoardService,
     private report: ReportService,
@@ -37,7 +38,7 @@ export class BoardComponent implements OnInit {
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yeah sure'
+        confirmButtonText: 'Yes'
       }).then((result) => {
         if (result.value) {
           window.open(data)
@@ -61,15 +62,36 @@ export class BoardComponent implements OnInit {
 
 
   NewBoard(name: string) {
-    if (name === "") {
+    if (name.trim() === "") {
       swal.fire(
-        { title: "THAT cant\' be empty", text: "type again ?", icon: "warning", heightAuto: false }
-      );
+        {
+          title: "THAT cant\' be empty",
+          text: "type again ?",
+          input: 'text',
+          inputValue: name,
+          showCancelButton: true,
+          icon: "warning",
+          heightAuto: false,
+          inputValidator: (value) => {
+            if (!value) {
+              return 'You need to write something!'
+            }
+            if (value.trim() === "") {
+              return 'You need to write something!'
+            }
+            else {
+              var newBoard = new Board()
+              newBoard.boardName = value;
+              this.board.NewBoard(newBoard).subscribe(NewBoard => this.boards.push(NewBoard));
+            }
+          }
+
+        }
+      )
       return;
     }
     name.trim();
     var newBoard = new Board()
-    newBoard = new Board();
     newBoard.boardName = name;
     this.board.NewBoard(newBoard).subscribe(NewBoard => this.boards.push(NewBoard));
     // this.board.NewBoard(newBoard);
@@ -129,9 +151,11 @@ export class BoardComponent implements OnInit {
             this.boards = this.boards.filter(each => each.id !== Id)
             swal.fire({
               title: 'Deleted!',
-              text: 'Your file has been deleted.',
               icon: 'success',
-              heightAuto: false
+              heightAuto: false,
+              timer:1000,
+              showConfirmButton:false
+              
             })
           }
         })
@@ -158,13 +182,15 @@ export class BoardComponent implements OnInit {
               title: 'Deleted!',
               text: 'Your file has been deleted.',
               icon: 'success',
-              heightAuto: false
+              heightAuto: false,
+              timer:1000,
+              showConfirmButton:false
             })
+            this.EverythingIsDeleted = !this.EverythingIsDeleted;
             this.boards = []
           }
         })
       }
-
     })
   }
 

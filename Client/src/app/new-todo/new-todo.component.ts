@@ -17,10 +17,33 @@ export class NewTodoComponent implements OnInit {
   }
 
   newTodo(name: string, boardId: number) {
-    if (name === "") {
+    if (name.trim() === "") {
       swal.fire(
-        { title: "THAT cant\' be empty", text: "type again ?", icon: "warning", heightAuto: false }
-      );
+        {
+          title: "THAT cant\' be empty",
+          text: "type again ?",
+          input: 'text',
+          inputValue: name,
+          showCancelButton: true,
+          icon: "warning",
+          heightAuto: false,
+          inputValidator: (value) => {
+            if (!value) {
+              return 'You need to write something!'
+            }
+            if (value.trim() === "") {
+              return 'You need to write something!'
+            }
+            else {
+              var newTodo = new Todo()
+              newTodo.boardId = boardId;
+              newTodo.todoName = value;
+              this.todo.NewTodo(newTodo).subscribe(data => this.NewTodoEvent.emit(data));
+            }
+          }
+
+        }
+      )
       return;
     }
     const newTodo = new Todo();

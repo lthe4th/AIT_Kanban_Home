@@ -1,17 +1,17 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges, SimpleChange } from '@angular/core';
 import { MemosService } from '../Services/memos.service';
 import { memo } from '../Models/memos';
 import swal from 'sweetalert2'
-import { of } from 'rxjs';
 
 @Component({
   selector: 'app-memos',
   templateUrl: './memos.component.html',
   styleUrls: ['./memos.component.scss']
 })
-export class MemosComponent implements OnInit {
+export class MemosComponent implements OnInit, OnChanges {
   constructor(private memo: MemosService) { }
   memoList: memo[] = [];
+  @Input() Deleted: boolean;
   ngOnInit() {
     this.getMemos();
   }
@@ -20,9 +20,13 @@ export class MemosComponent implements OnInit {
     this.memo.GetMemo().subscribe(data => this.memoList = data);
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    this.memoList = [];
+  }
+
   openMemoBox() {
     swal.fire({
-      title: 'sOMe tHIng tO REmeMBer',
+      title: 'some thing to remember',
       input: 'text',
       inputValue: name,
       showCancelButton: true,
@@ -36,7 +40,7 @@ export class MemosComponent implements OnInit {
     })
   }
 
-  delete(id:number) {
+  delete(id: number) {
     swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
