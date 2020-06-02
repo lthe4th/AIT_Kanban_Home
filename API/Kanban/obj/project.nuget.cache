@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "fSYbeMexZc+MG4DTu5HTwJ3DhIMkFAjx9jakkujDTTEHPa5Hh2QZMicAB8zhI0N+24do4c38dOSfZv6EpJKQlg==",
+  "dgSpecHash": "5rUsNRqGaZUtPD3BVUtvK7P/EyIVA+xB2Kmy70EP2932tS+udT8CU+DuC/dFH5lbM2iPYFKVgKjaIY6p3CYgFQ==",
   "success": true,
   "projectFilePath": "D:\\AIT_Kanban_Home\\API\\Kanban\\Kanban.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\longpkd\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\longpkd\\.nuget\\packages\\epplus\\5.1.2\\epplus.5.1.2.nupkg.sha512",
+    "C:\\Users\\longpkd\\.nuget\\packages\\microsoft.aspnetcore.authentication.certificate\\3.1.4\\microsoft.aspnetcore.authentication.certificate.3.1.4.nupkg.sha512",
     "C:\\Users\\longpkd\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.0\\microsoft.extensions.configuration.3.1.0.nupkg.sha512",
     "C:\\Users\\longpkd\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.0\\microsoft.extensions.configuration.abstractions.3.1.0.nupkg.sha512",
     "C:\\Users\\longpkd\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\3.1.0\\microsoft.extensions.configuration.fileextensions.3.1.0.nupkg.sha512",

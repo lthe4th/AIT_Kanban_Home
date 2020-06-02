@@ -16,6 +16,7 @@ using RepoInterface;
 using Repo;
 using ServicesInterface;
 using Services;
+using Microsoft.AspNetCore.Authentication.Certificate;
 
 namespace Kanban
 {
@@ -39,6 +40,9 @@ namespace Kanban
             services.AddTransient<ITodoServices, TodoServices>();
             services.AddTransient<IBoardServices, BoardServices>();
             services.AddTransient<IItemServices, ItemServices>();
+            services.AddTransient<IMemosRepo,MemosRepo>();
+            services.AddTransient<IMemosServices,MemosServices>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

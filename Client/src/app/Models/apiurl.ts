@@ -1,3 +1,3 @@
 export const apiurl = {
-    URL: "https://localhost:5001/api"
+    URL: "https://192.168.145.97:5001/api"
 }

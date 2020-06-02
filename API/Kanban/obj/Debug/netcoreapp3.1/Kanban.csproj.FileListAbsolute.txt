@@ -114,3 +114,4 @@ G:\AIT_Kanban_Home\API\Kanban\obj\Debug\netcoreapp3.1\Kanban.pdb
 G:\AIT_Kanban_Home\API\Kanban\obj\Debug\netcoreapp3.1\Kanban.genruntimeconfig.cache
 D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\EPPlus.dll
 D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+D:\AIT_Kanban_Home\API\Kanban\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Certificate.dll

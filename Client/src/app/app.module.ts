@@ -14,6 +14,7 @@ import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 import { CheckListComponent } from './check-list/check-list.component';
 import { NewTodoComponent } from './new-todo/new-todo.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { MemosComponent } from './memos/memos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     TodoDetailComponent,
     CheckListComponent,
     NewTodoComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    MemosComponent
   ],
   imports: [
     BrowserModule,

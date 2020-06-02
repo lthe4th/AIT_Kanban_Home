@@ -28,14 +28,16 @@ namespace Kanban.Controllers
         private readonly IBoardServices board;
         private readonly ITodoServices todo;
         private readonly IItemServices item;
+        private readonly IMemosServices memo;
 
         [Obsolete]
-        public ReportController(IHostingEnvironment hostingEnvironment, IBoardServices board, ITodoServices todo, IItemServices item)
+        public ReportController(IHostingEnvironment hostingEnvironment, IBoardServices board, ITodoServices todo, IItemServices item, IMemosServices memo)
         {
             this.hostingEnvironment = hostingEnvironment;
             this.board = board;
             this.todo = todo;
             this.item = item;
+            this.memo = memo;
         }
 
 
@@ -53,7 +55,8 @@ namespace Kanban.Controllers
                 file = new FileInfo(Path.Combine(rootFolder, fileName));
             }
             await Task.Yield();
-            var BoardList = board.Boards(); ;
+            var BoardList = board.Boards();
+            var MemoList = memo.MemosList();
             using (ExcelPackage package = new ExcelPackage(file))
             {
                 ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("board");
@@ -75,7 +78,7 @@ namespace Kanban.Controllers
                     foreach (var TodoItem in TodoList)
                     {
                         worksheet.Cells[row, 2].Value = TodoItem.TodoName;
-                        FillBackGround(worksheet,row,row,1,true);
+                        FillBackGround(worksheet, row, row, 1, true);
                         FillBackGround(worksheet, row, 2, 3, false);
                         // worksheet.Cells[row,2].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(182,196,162));
                         var ItemList = item.Items(TodoItem.Id);
@@ -98,7 +101,7 @@ namespace Kanban.Controllers
                             FillBackGround(worksheet, row, row, 1, true);
                         }
                         row++;
-                        FillBackGround(worksheet,row,row,5,true);
+                        FillBackGround(worksheet, row, row, 5, true);
                     }
                     row++;
                 }
@@ -134,6 +137,28 @@ namespace Kanban.Controllers
                     worksheet.Cells.Style.WrapText = true;
 
                 }
+                row++;
+
+                worksheet.Cells[row, 2].Value = "Memos";
+                worksheet.Cells[row, 2].Style.Font.SetFromFont(new Font("Arial", 20, FontStyle.Bold));
+                worksheet.Cells[row, 2].Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
+                worksheet.Cells[row, 2].Style.Border.Top.Style = ExcelBorderStyle.Thin;
+                worksheet.Cells[row, 2].Style.Border.Left.Style = ExcelBorderStyle.Thin;
+                worksheet.Cells[row, 2].Style.Border.Right.Style = ExcelBorderStyle.Thin;
+                FillBackGround(worksheet, row, 2, 3, false);
+                row++;
+                foreach (var item in MemoList)
+                {
+                    worksheet.Cells[row, 2].Value = item.content;
+                    FillBackGround(worksheet, row, 2, 6, false);
+                    worksheet.Cells[row, 2].Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
+                    worksheet.Cells[row, 2].Style.Border.Top.Style = ExcelBorderStyle.Thin;
+                    worksheet.Cells[row, 2].Style.Border.Left.Style = ExcelBorderStyle.Thin;
+                    worksheet.Cells[row, 2].Style.Border.Right.Style = ExcelBorderStyle.Thin;
+
+                    row++;
+                }
+
 
                 package.Save();
             }
@@ -147,6 +172,7 @@ namespace Kanban.Controllers
             {
                 string Position = "A" + rowa + ":D" + rowb;
                 worksheet.Cells[Position].Style.Fill.PatternType = ExcelFillStyle.Solid;
+
                 switch (color)
                 {
                     case 1:
@@ -172,6 +198,11 @@ namespace Kanban.Controllers
                     case 5:
                         {
                             worksheet.Cells[Position].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(142, 155, 144));
+                            return true;
+                        }
+                    case 6:
+                        {
+                            worksheet.Cells[Position].Style.Fill.BackgroundColor.SetColor(Color.Yellow);
                             return true;
                         }
                     default:
@@ -208,6 +239,11 @@ namespace Kanban.Controllers
                     case 5:
                         {
                             worksheet.Cells[rowa, rowb].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(142, 155, 144));
+                            return true;
+                        }
+                    case 6:
+                        {
+                            worksheet.Cells[rowa, rowb].Style.Fill.BackgroundColor.SetColor(Color.Yellow);
                             return true;
                         }
                     default:

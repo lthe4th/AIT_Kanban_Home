@@ -15,7 +15,7 @@ const httpOption = {
 })
 export class ItemService {
   // apiurl = "https://localhost:5001/api/items";
-  apiurl = `${apiurl.URL}.items`
+  apiurl = `${apiurl.URL}/items`
   constructor(private http: HttpClient) { }
 
   GetItems(Id: number): Observable<Item[]> {

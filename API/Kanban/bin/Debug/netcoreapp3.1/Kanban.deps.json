@@ -25,6 +25,7 @@
       "Kanban/1.0.0": {
         "dependencies": {
           "EPPlus": "5.1.2",
+          "Microsoft.AspNetCore.Authentication.Certificate": "3.1.4",
           "Models": "1.0.0",
           "Repo": "1.0.0",
           "RepoInterface": "1.0.0",
@@ -356,6 +357,17 @@
         },
         "compile": {
           "lib/netstandard2.1/EPPlus.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Certificate/3.1.4": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Certificate.dll": {
+            "assemblyVersion": "3.1.4.0",
+            "fileVersion": "3.100.420.21604"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Certificate.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/3.1.0": {
@@ -2786,6 +2798,13 @@
       "sha512": "sha512-zZItzXfiNbO7PjrzuW4li87DCgtv910ZkXUOnYCZnLs9lJx5v8P5OzMGZh7VOiOs2IoUqwF0qdkzI3sRA6HXMQ==",
       "path": "epplus/5.1.2",
       "hashPath": "epplus.5.1.2.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Certificate/3.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZbcqWE/FtYLYJ23+toPsXcTf83JeNMxXmOfq5ajO4mcznRM5EDmecQ9ByEvMoXldsxwmblM7LQWTuOr1gruLMg==",
+      "path": "microsoft.aspnetcore.authentication.certificate/3.1.4",
+      "hashPath": "microsoft.aspnetcore.authentication.certificate.3.1.4.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/3.1.0": {
       "type": "package",

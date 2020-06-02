@@ -60,6 +60,10 @@
             "EPPlus": {
               "target": "Package",
               "version": "[5.1.2, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Certificate": {
+              "target": "Package",
+              "version": "[3.1.4, )"
             }
           },
           "imports": [

@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Memos</h2>
+    <button mat-icon-button mat-mat-raised-button class="btn btn-success" (click)="openMemoBox()">
+        <mat-icon>add</mat-icon>
+    </button>
+    <div class="row content">
+        <div *ngFor="let memo of memoList" class="col-8 memo">
+            <div class="layer"></div>
+            <mat-card>
+                <mat-card-content>
+                    <p>{{memo.content}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button (click)="delete(memo.id)" style="float: right;">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+            <div class="layer2"></div>
+        </div>
+
+    </div>
+
+</div>

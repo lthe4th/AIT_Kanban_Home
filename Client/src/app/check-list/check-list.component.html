@@ -11,12 +11,12 @@
         </div>
     </div>
     <div class="NewItem">
-        <div class="InputForm col-md-4 row">
+        <div class="InputForm col-md-4 row" style="margin-top: 3%;">
             <mat-form-field>
                 <mat-label>Add Item</mat-label>
                 <input matInput #NewItemName (keydown.enter)="NewItem(todoId,NewItemName.value);NewItemName.value=''">
             </mat-form-field>
-            <button mat-flat-button mat-icon-button color="primary"
+            <button mat-flat-button mat-icon-button class="btn btn-success"
                 (click)="NewItem(todoId,NewItemName.value);NewItemName.value=''">
                 <mat-icon>add</mat-icon>
             </button>

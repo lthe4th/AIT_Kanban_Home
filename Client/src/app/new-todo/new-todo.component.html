@@ -4,7 +4,7 @@
         <mat-label style="color: white;">New Task</mat-label>
         <input matInput #newTodoInput (keydown.enter)="newTodo(newTodoInput.value,this.BoardId);newTodoInput.value=''" style="color: white;">
       </mat-form-field>
-      <button class="btn btn-success" (click)="newTodo(newTodoInput.value,this.BoardId);newTodoInput.value=''">
+      <button class="btn btn-success" mat-icon-button (click)="newTodo(newTodoInput.value,this.BoardId);newTodoInput.value=''">
         <mat-icon>add</mat-icon>
       </button>
     </div>

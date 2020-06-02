@@ -36,6 +36,18 @@
           "lib/netstandard2.1/EPPlus.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Authentication.Certificate/3.1.4": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Certificate.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Certificate.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.Extensions.Configuration/3.1.0": {
         "type": "package",
         "dependencies": {
@@ -1400,6 +1412,21 @@
         "lib/netstandard2.1/EPPlus.xml",
         "license.md",
         "readme.txt"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Certificate/3.1.4": {
+      "sha512": "ZbcqWE/FtYLYJ23+toPsXcTf83JeNMxXmOfq5ajO4mcznRM5EDmecQ9ByEvMoXldsxwmblM7LQWTuOr1gruLMg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.certificate/3.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Certificate.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.Certificate.xml",
+        "microsoft.aspnetcore.authentication.certificate.3.1.4.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.certificate.nuspec"
       ]
     },
     "Microsoft.Extensions.Configuration/3.1.0": {
@@ -4823,6 +4850,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "EPPlus >= 5.1.2",
+      "Microsoft.AspNetCore.Authentication.Certificate >= 3.1.4",
       "Models >= 1.0.0",
       "Repo >= 1.0.0",
       "RepoInterface >= 1.0.0",
@@ -4890,6 +4918,10 @@
           "EPPlus": {
             "target": "Package",
             "version": "[5.1.2, )"
+          },
+          "Microsoft.AspNetCore.Authentication.Certificate": {
+            "target": "Package",
+            "version": "[3.1.4, )"
           }
         },
         "imports": [

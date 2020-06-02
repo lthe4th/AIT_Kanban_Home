@@ -21,7 +21,7 @@ export class BoardComponent implements OnInit {
   constructor(
     private board: BoardService,
     private report: ReportService,
-    public diaglog: MatDialog,
+    public diaglog: MatDialog
   ) { }
 
   ngOnInit() {

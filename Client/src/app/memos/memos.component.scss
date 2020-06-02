@@ -1,0 +1,62 @@
+.container{
+    margin-top: 20px;
+    max-height: 80vh;
+}
+
+.content{
+    overflow: visible;
+    padding-left: 10%;
+}
+
+
+
+.memo{
+    position: relative;
+    margin: 1rem;
+    padding: .5rem;
+    background-color: #F8f8ff;
+    box-shadow: 0 4px 15px 2px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    // transform: rotate(-5deg);
+    height: max-content;;
+    mat-card-content{
+        white-space: normal;
+        word-wrap: break-word;
+        p{
+            font-size: 20px;
+            text-align: left;
+        }
+    }
+}
+
+.layer{
+    position: absolute;
+    background-color: #F8f8ff;
+    box-shadow: 0 4px 15px 2px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    width: 100%;
+    height: 100%;
+    bottom: 5px;
+    right: 5px;
+    transform: rotate(-2deg);
+}
+
+.layer2{
+    position: absolute;
+    background-color: #F8f8ff;
+    box-shadow: 0 4px 15px 2px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    width: 100%;
+    height: 100%;
+    bottom: 5px;
+    right: 5px;
+    transform: rotate(-5deg);
+    z-index: -1;
+}
+
+
+mat-card{
+    background-color: #F8f8ff;
+    box-shadow: none !important;
+    box-shadow: 0 4px 15px 2px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    transform: rotate(-2deg);
+
+
+}

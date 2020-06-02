@@ -76,8 +76,9 @@ export class TodoComponent implements OnInit {
   OpenDetail(toSend: Todo) {
     const dialogRef = this.dialog.open(TodoDetailComponent, {
       data: toSend,
-      autoFocus: false,
-      
+      minWidth: "50vw",
+      minHeight:"60vh",
+      autoFocus: false
     })
     dialogRef.afterClosed().subscribe(data => {
       if (typeof (data) === "number") {

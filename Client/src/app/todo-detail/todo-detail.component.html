@@ -7,7 +7,7 @@
             <mat-icon (click)="changeName()">edit</mat-icon>
         </button>
     </div>
-    <mat-tab-group>
+    <mat-tab-group mat-align-tabs="center">
         <mat-tab label="CheckList" class="checklist" color="accent">
             <app-check-list [todoId]="data.id"></app-check-list>
         </mat-tab>

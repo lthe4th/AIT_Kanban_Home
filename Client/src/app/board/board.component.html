@@ -28,11 +28,15 @@
             <p> ©copyright l.4th 2020</p>
         </div>
     </mat-sidenav>
+    <mat-sidenav #Memo="matSidenav" position="end" mode="push">
+        <app-memos></app-memos>
+    </mat-sidenav>
     <mat-sidenav-content>
         <header>
             <button (click)="sidenav.open()" mat-flat-button style="background-color: transparent; color: white;">
                 <mat-icon>menu</mat-icon>
             </button>
+            <button mat-button (click)="Memo.open()" style="float: right;"><mat-icon style="color: white;">assignment</mat-icon></button>
         </header>
 
         <body>
@@ -95,7 +99,7 @@
                                         <input matInput #newboardname style="color: white;"
                                             (keydown.enter)="NewBoard(newboardname.value);newboardname.value=''">
                                     </mat-form-field>
-                                    <button class="btn btn-success" style="line-height: 5px; margin-left: 1rem;"
+                                    <button class="btn btn-success" mat-icon-button style="line-height: 5px; margin-left: 1rem;"
                                         (click)="NewBoard(newboardname.value);newboardname.value=''">
                                         <mat-icon>add</mat-icon>
                                     </button>
