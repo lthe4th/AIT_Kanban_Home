@@ -42,7 +42,7 @@ export class CheckListComponent implements OnInit {
   NewItem(Id: number, name: string) {
     if (name === "") {
       swal.fire(
-        { title: "THAT cant\' be empty", text: "type again ?", icon: "warning", heightAuto: false }
+        { title: "Uh oh,We need a name for that", icon: "warning", heightAuto: false }
       );
       return;
     }

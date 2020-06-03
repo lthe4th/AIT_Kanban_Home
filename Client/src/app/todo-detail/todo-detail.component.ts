@@ -15,6 +15,7 @@ import swal from 'sweetalert2'
 })
 export class TodoDetailComponent implements OnInit {
   CC = new CC()
+  _todo = new Todo;
   constructor(
     public diaglogRef: MatDialogRef<TodoDetailComponent>,
     public dialog: MatDialog,
@@ -23,7 +24,7 @@ export class TodoDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    this._todo = this.data;
   }
 
 
@@ -48,7 +49,8 @@ export class TodoDetailComponent implements OnInit {
               icon: 'success',
               heightAuto: false,
               timer: 1000,
-              showConfirmButton:false
+              showConfirmButton:false,
+              timerProgressBar: true
 
             })
           }
@@ -88,7 +90,7 @@ export class TodoDetailComponent implements OnInit {
         var modNameTodo = new Todo();
         modNameTodo = this.data;
         modNameTodo.todoName = value;
-        this.todo.ModTodo(modNameTodo).subscribe(data => this.data = data);
+        this.todo.ModTodo(modNameTodo).subscribe(data => {this._todo = data;});
         
       }
     })

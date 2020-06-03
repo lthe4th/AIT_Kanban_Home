@@ -3,7 +3,7 @@
 }
 mat-sidenav-container{
     height: 100%;
-    background: linear-gradient(rgba($color:#000,$alpha:0.4),rgba($color:#000,$alpha:0.4)),url(../../assets/background.jpg);
+    background: linear-gradient(rgba($color:#000,$alpha:0.2),rgba($color:#000,$alpha:0.2)),url(../../assets/freddy-castro-u3ajSXhZM_U-unsplash.jpg);
     background-size: cover;
     mat-sidenav-content{
         header{
@@ -20,10 +20,10 @@ mat-sidenav-container{
     height: max-content;
 }
 .dtpr{
-    background-color: rgba($color: #000, $alpha: 0.3);
+    background-color: rgba($color: #000, $alpha: 0.5);
 }
 .tpr{
-    background: rgba($color: #000, $alpha: 0.3);
+    background: rgba($color: #000, $alpha: 0.5);
 }
 .rtpr{
     background: transparent;
@@ -116,11 +116,12 @@ mat-sidenav-content{
         display:none;
     }
     mat-sidenav{
-        width: 25%;
+        width: 20%;
         text-align: center;
         .sidenav-heading{
+            padding-top: 5rem;
             img{
-                width: 300px;
+                width: 250px;
             }
         }
         .sidenav-body{
@@ -155,7 +156,7 @@ mat-sidenav-content{
             padding: 1rem;
             box-shadow: none;
             border-radius: .3rem;
-            background-color: rgba($color: #000, $alpha: 0.2);
+            background-color: rgba($color: #000, $alpha: 0.5);
             mat-panel-title{
                 color: white;
             }

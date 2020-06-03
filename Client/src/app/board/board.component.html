@@ -19,9 +19,9 @@
                 </div>
             </div>
             <div class="ReportExport" style="margin: 2rem;">
-                <button mat-raised-button color="primary" style="height: 4rem;" (click)="getDownloadLink()"><mat-icon>get_app</mat-icon><span>Generate an excel file for this Section</span></button>
+                <button mat-raised-button color="primary" style="height: 4rem;" (click)="getDownloadLink()"><mat-icon>get_app</mat-icon><div><h6> Download Exel File</h6></div></button>
             </div> 
-            <button mat-flat-button color="warn" (click)="DeleteEveryThing();sidenav.close()" style="height: 4rem;">Delete Everything</button>
+            <button mat-flat-button color="warn" (click)="DeleteEveryThing();sidenav.close()" style="height: 4rem;"><mat-icon>warning</mat-icon> <div><h6>Delete Everything</h6></div></button>
 
         </div>
         <div class="sidenav-footer">
@@ -54,7 +54,7 @@
                         </button>
                     </div>
                     <div class="BoardOnMobile" *ngIf="boards.length>0">
-                        <mat-tab-group >
+                        <mat-tab-group animationDuration="0ms">
                             <mat-tab *ngFor="let board of boards" label="{{board.boardName}}" class="tpr">
                                 <mat-card class="tpr">
                                     <mat-card-header class="rtpr" >

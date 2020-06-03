@@ -33,7 +33,7 @@ export class MemosComponent implements OnInit, OnChanges {
       heightAuto: false,
       inputValidator: (value) => {
         if (!value) {
-          return 'You need to write something!'
+          return "You can\'t try to memo nothing, right ?"
         }
         this.newMemos(value);
       }
@@ -59,7 +59,10 @@ export class MemosComponent implements OnInit, OnChanges {
               title: 'Deleted!',
               text: 'Your file has been deleted.',
               icon: 'success',
-              heightAuto: false
+              heightAuto: false,
+              showConfirmButton:false,
+              timerProgressBar: true,
+              timer:1000
             })
           }
         })

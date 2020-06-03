@@ -118,8 +118,8 @@ export class TodoComponent implements OnInit {
               icon: 'success',
               heightAuto: false,
               timer: 1000,
-              showConfirmButton:false
-
+              showConfirmButton:false,
+              timerProgressBar: true
 
             })
           }

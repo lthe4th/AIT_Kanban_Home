@@ -20,8 +20,7 @@ export class NewTodoComponent implements OnInit {
     if (name.trim() === "") {
       swal.fire(
         {
-          title: "THAT cant\' be empty",
-          text: "type again ?",
+          title: "Uh oh,We need a name for that",
           input: 'text',
           inputValue: name,
           showCancelButton: true,

@@ -29,8 +29,11 @@ button:focus {
 }
 
 .mat-tab-label{
-    color: rgba(107, 102, 102, 0.678);
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
 }
+
 
 .mat-tab-body-content::-webkit-scrollbar ,.ng-trigger::-webkit-scrollbar ,.ng-trigger-translateTab::-webkit-scrollbar{
     display: none;

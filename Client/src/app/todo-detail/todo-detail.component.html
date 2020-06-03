@@ -1,7 +1,7 @@
 <div class="container-fluid" style="min-height: 40vh;">
     <div class="Heading row">
         <div class="cut-text">
-            {{data.todoName}}
+            {{_todo.todoName}}
         </div>
         <button mat-icon-button  (click)="changeName()">
             <mat-icon>edit</mat-icon>
@@ -9,7 +9,7 @@
     </div>
     <mat-tab-group mat-align-tabs="center">
         <mat-tab label="CheckList" class="checklist" color="accent">
-            <app-check-list [todoId]="data.id"></app-check-list>
+            <app-check-list [todoId]="_todo.id"></app-check-list>
         </mat-tab>
     </mat-tab-group>
     <button mat-raised-button color="accent" class="deletebtn" (click)="deleteThisTask()">Delete this Task</button>

@@ -30,6 +30,7 @@ export class BoardComponent implements OnInit {
   }
 
   getDownloadLink() {
+    swal.showLoading(); 
     this.report.getReportDownloadLink().subscribe(data => {
       swal.fire({
         title: 'Succes',
@@ -65,8 +66,7 @@ export class BoardComponent implements OnInit {
     if (name.trim() === "") {
       swal.fire(
         {
-          title: "THAT cant\' be empty",
-          text: "type again ?",
+          title: "Uh oh,We need a name for that",
           input: 'text',
           inputValue: name,
           showCancelButton: true,
@@ -184,7 +184,8 @@ export class BoardComponent implements OnInit {
               icon: 'success',
               heightAuto: false,
               timer:1000,
-              showConfirmButton:false
+              showConfirmButton:false,
+              timerProgressBar: true,
             })
             this.EverythingIsDeleted = !this.EverythingIsDeleted;
             this.boards = []

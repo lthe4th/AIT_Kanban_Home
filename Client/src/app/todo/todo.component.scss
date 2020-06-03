@@ -33,9 +33,10 @@
         display:none;
     }
     .droplist{
-        min-height: 3rem;
+        min-height: 4rem;
         margin-top: .5rem;
         margin-bottom: .5rem;
+        padding-bottom: 1rem;
     }
     .Todos{
         margin-bottom: .5rem;
@@ -47,7 +48,6 @@
             word-wrap: break-word;
             text-align: left;
         }
-
     }
 }
 
